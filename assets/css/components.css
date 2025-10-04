@@ -1410,6 +1410,7 @@
                      .subscription-price {
                         display: flex;
                         align-items: end;
+                        padding-bottom: 2px;
 
                         h3 {
                            font-family: var(--font-family-base);
@@ -1426,12 +1427,24 @@
                         }
 
                         span {
-                           font-size: 10px;
+                           font-weight: 500;
+                           font-size: 12px;
+                           line-height: 24px;
+                           letter-spacing: 0%;
+                           color: #000000;
+                           display: block;
+                           margin-left: 2px;
+                           margin-bottom: -2px;
                         }
-                     }
 
-                     .save-txt {
-                        margin-left: 20px;
+                        .save-txt {
+                           margin-left: 10px;
+                           color: #505050;
+                           font-weight: 500;
+                           font-size: 14px;
+                           line-height: 22px;
+                           letter-spacing: 3%;
+                        }
                      }
                   }
 

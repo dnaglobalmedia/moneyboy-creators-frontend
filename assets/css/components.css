@@ -1457,3 +1457,27 @@
       }
    }
 }
+
+/* Multi Tabs Styles */
+.multi-tab-section {
+   .multi-tabs-layout-container {
+      .multi-tabs-action-buttons {}
+   }
+}
+
+[data-multiple-tabs-section] {
+   [data-multi-tabs-switch-btn] {
+      &[data__active] {
+         background-color: #00ff22;
+      }
+   }
+
+   [data-multi-tabs-content-tab] {
+      display: none;
+
+      &[data__active] {
+         display: block;
+         background-color: #ff2200;
+      }
+   }
+}

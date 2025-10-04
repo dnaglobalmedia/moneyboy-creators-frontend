@@ -91,6 +91,10 @@
                   width: 100%;
                   max-width: var(--right-aside-width);
                }
+
+               .creator-profile-page-container {
+                  width: 100%;
+               }
             }
          }
       }

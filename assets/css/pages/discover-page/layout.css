@@ -1,0 +1,13 @@
+.discovery-page-container {
+    .discovery-page-content-container {
+        .discover-page-filters-container {}
+
+        .discovery-page-content-wrapper {
+            .discovery-page-cards-layouts {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 16px;
+            }
+        }
+    }
+}

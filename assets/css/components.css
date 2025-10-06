@@ -1745,3 +1745,141 @@
       }
    }
 }
+
+/* User Profile Card */
+.user-profile-card-wrapper {
+   .user-profile-card-container {
+      position: relative;
+      aspect-ratio: 260/ 332;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0px 4px 13.5px 0px #00000040;
+      cursor: pointer;
+      transition: var(--transition-fast);
+
+      &:hover {
+         box-shadow: 0px 4px 13.5px 0px #1d1d1d79;
+      }
+
+      .user-profile-card__img {
+         width: 100%;
+         height: 100%;
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+         }
+      }
+
+      .user-profile-content-overlay-container {
+         position: absolute;
+         inset: 0;
+         padding: 12px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: end;
+
+         .user-profile-card__action-btns {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            .user-profile-card__like-btn {
+               background-color: #FFFFFF30;
+               display: grid;
+               place-items: center;
+               width: 36px;
+               aspect-ratio: 1/1;
+               border-radius: 100%;
+               cursor: pointer;
+
+               &:hover {
+                  svg {
+                     scale: 1.1;
+                  }
+               }
+
+               svg {
+                  path {
+                     stroke: white;
+                  }
+               }
+            }
+         }
+
+         .user-profile-card__info-container {
+            width: 100%;
+            background: #00000029;
+            backdrop-filter: blur(25px);
+            border: 1px solid #ffffff5b;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px 13px;
+
+            .user-profile-card__info {
+               display: flex;
+               flex-direction: column;
+               gap: 2px;
+
+               .user-profile-card__name-badge {
+                  display: flex;
+                  align-items: center;
+                  gap: 2px;
+
+                  .user-profile-card__name {
+                     font-family: var(--font-family-heading);
+                     font-weight: 500;
+                     font-size: 14px;
+                     line-height: 100%;
+                     letter-spacing: 0.65px;
+                     color: #FFFFFF;
+                  }
+
+                  .user-profile-card__badge {
+                     width: 27px;
+                     display: flex;
+
+                     img {
+                        width: 100%;
+                     }
+                  }
+               }
+
+               .user-profile-card__username {
+                  font-weight: 600;
+                  font-size: 12px;
+                  line-height: 100%;
+                  color: #FFFFFF9E;
+               }
+            }
+
+            .user-profile-card__wishlist-btn {
+               background-color: #FFFFFF30;
+               display: grid;
+               place-items: center;
+               width: 36px;
+               aspect-ratio: 1/1;
+               border-radius: 100%;
+               cursor: pointer;
+
+               &:hover {
+                  svg {
+                     scale: 1.1;
+                  }
+               }
+
+               svg {
+                  path {
+                     stroke: white;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

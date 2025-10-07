@@ -18,3 +18,6 @@ import "./components/multi-tabs.js";
 
 // Custom Select Element Functionalities
 import "./components/custom-select.js";
+
+// Advanced Filters Layout Toggle Functionality
+import "./components/advanced-filters.js";

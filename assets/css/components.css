@@ -1830,6 +1830,9 @@
    background-color: white;
    padding: 10px 14px;
    border-radius: 25px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
 
    .content-filters-head-wrapper {
       .content-basic-filters-wrapper {
@@ -1844,15 +1847,35 @@
          }
       }
    }
+
+   .content-advanced-filters-wrapper {
+      background-color: #F4F4F4;
+      padding: 12px;
+      border-radius: 25px;
+      border: 1.5px solid #f7f7f7;
+      display: none;
+
+      /* display: none; */
+      .content-advanced-filters-layout {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         width: 100%;
+         gap: 12px;
+
+         .custom-select-element {
+            background-color: #FFFFFF;
+         }
+      }
+   }
 }
 
 .custom-select-element {
    border: 1.5px solid #EBEBEB;
-   background: #F9F9F9;
    border-radius: 18px;
    box-shadow: 0px 0px 0px 3px #FFFFFF inset;
    display: flex;
    position: relative;
+   background-color: #F9F9F9;
 
    .custom-select-label-wrapper {
       display: flex;
@@ -1861,6 +1884,7 @@
       padding: 18px 12px;
       width: 100%;
       cursor: pointer;
+      border-radius: inherit;
 
       .custom-select-icon-txt {
          display: flex;

@@ -128,7 +128,10 @@ function setupCustomSelect(selectElement) {
   const chevronSvg = selectElement.querySelector(".custom-select-chevron svg");
   const options = selectElement.querySelectorAll(".custom-select-option");
 
-  // --- NEW: Conditional Search Query ---
+  // --- NEW: Value Target is now the main selectElement ---
+  const valueTarget = selectElement;
+
+  // Conditional Search Query
   const searchContainer = selectElement.querySelector(
     "[data-custom-select-options-search]"
   );
@@ -160,8 +163,8 @@ function setupCustomSelect(selectElement) {
   activeSelects.push({
     element: selectElement,
     timeline: dropdownTimeline,
-    searchInput: searchInput, // This will be null if no search
-    filterOptions: filterOptions, // This will be null if no search
+    searchInput: searchInput,
+    filterOptions: filterOptions,
   });
 
   // --- Toggle Logic ---
@@ -201,7 +204,9 @@ function setupCustomSelect(selectElement) {
     clickedOption.setAttribute("data__option__active", "");
 
     labelTextSpan.textContent = newText;
-    trigger.setAttribute("data-custom-select-value", newText);
+
+    // --- Set the value on the main selectElement ---
+    valueTarget.setAttribute("data-custom-select-value", newText);
 
     toggleDropdown(false);
   }

@@ -516,3 +516,80 @@ input::placeholder {
       filter: brightness(120%);
    }
 }
+
+/* Premium Button */
+.premium-btn {
+   &.store-btn {
+      gap: 5px;
+
+      &::before {
+         content: '';
+         position: absolute;
+         inset: 1px;
+         display: block;
+         background-color: rgb(0, 0, 0);
+         border-radius: inherit;
+      }
+
+      &::after {
+         content: '';
+         inset: 1px;
+         display: block;
+         position: absolute;
+         border-radius: inherit;
+         background-image: url('./../media/images/element-assets/store-btn-bg-img.jpg');
+         background-size: 140%;
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-color: #000;
+         opacity: .5;
+      }
+
+      img {
+         width: 36px;
+      }
+
+      span {
+         font-size: 24px;
+      }
+   }
+
+   background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
+   min-width: max-content;
+   width: 100%;
+   border-radius: 18px;
+   padding: 18px 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   cursor: pointer;
+   gap: 10px;
+
+   &>* {
+      position: relative;
+      z-index: 1;
+   }
+
+   &::before {
+      background-color: black;
+      content: '';
+      inset: 1px;
+      position: absolute;
+      border-radius: inherit;
+   }
+
+   span {
+      display: block;
+      display: inline-block;
+      font-family: var(--font-family-heading);
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 0.25px;
+      background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+   }
+}

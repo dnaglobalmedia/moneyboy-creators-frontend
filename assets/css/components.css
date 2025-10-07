@@ -1490,65 +1490,6 @@
                background-color: rgba(210, 210, 210, 0.222);
             }
          }
-
-         .store-page-btn {
-            padding: .5px;
-            background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
-            width: 100%;
-            border-radius: 14px;
-            min-width: max-content;
-            position: relative;
-
-            &::before {
-               content: '';
-               position: absolute;
-               inset: .5px;
-               display: block;
-               background-color: rgb(0, 0, 0);
-               border-radius: inherit;
-            }
-
-            &::after {
-               content: '';
-               inset: .5px;
-               display: block;
-               position: absolute;
-               border-radius: inherit;
-               background-image: url('./../media/images/element-assets/store-btn-bg-img.jpg');
-               background-size: 140%;
-               background-repeat: no-repeat;
-               background-position: center center;
-               background-color: #000;
-               opacity: .5;
-            }
-
-            a {
-               padding: 18px 10px;
-               min-width: max-content;
-               display: flex;
-               width: 100%;
-               justify-content: center;
-               border-radius: inherit;
-               position: relative;
-               z-index: 2;
-
-               img {
-                  width: 31px;
-               }
-
-               span {
-                  display: block;
-                  display: inline-block;
-                  font-weight: 600;
-                  letter-spacing: 0.25px;
-                  background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
-                  -webkit-background-clip: text;
-                  background-clip: text;
-                  -webkit-text-fill-color: transparent;
-                  color: transparent;
-               }
-            }
-         }
       }
    }
 }
@@ -1876,6 +1817,143 @@
                svg {
                   path {
                      stroke: white;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+/* Filter Section */
+.content-filters-main-wrapper {
+   background-color: white;
+   padding: 10px 14px;
+   border-radius: 25px;
+
+   .content-filters-head-wrapper {
+      .content-basic-filters-wrapper {
+         .content-basic-filters-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 16px;
+
+            .content-filter-card-wrapper {
+               width: 100%;
+            }
+         }
+      }
+   }
+}
+
+.custom-select-element {
+   border: 1.5px solid #EBEBEB;
+   background: #F9F9F9;
+   border-radius: 18px;
+   box-shadow: 0px 0px 0px 3px #FFFFFF inset;
+   display: flex;
+   position: relative;
+
+   .custom-select-label-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 12px;
+      width: 100%;
+      cursor: pointer;
+
+      .custom-select-icon-txt {
+         display: flex;
+         align-items: center;
+         gap: 12px;
+
+         svg {
+            path {
+               stroke: #444444;
+            }
+         }
+
+         span {
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 0%;
+            color: #444444;
+         }
+      }
+
+      .custom-select-chevron {
+         display: flex;
+         align-items: center;
+
+         svg {
+            path {
+               stroke: #292D32;
+            }
+         }
+      }
+   }
+
+   .custom-select-options-dropdown-wrapper {
+      position: absolute;
+      width: 100%;
+      z-index: 3;
+      top: calc(100% + 0px);
+      border: 1.5px solid #EBEBEB;
+      background: #F9F9F9;
+      border-radius: 18px;
+      box-shadow: 0px 0px 0px 3px #FFFFFF inset, 0px 4px 13.5px 0px #00000040;
+      /* ------------------------------------------------- */
+      /* ------------------------------------------------- */
+      /* ------------------------------------------------- */
+      /* ------------------------------------------------- */
+      /* ---------- Hide the DropDown by Default --------- */
+      display: none;
+
+      .custom-select-options-dropdown-container {
+         padding: 10px;
+         display: flex;
+         flex-direction: column;
+         gap: 6px;
+
+         .custom-select-options-search {
+            .label-input {
+               background: #f6f6f6;
+            }
+         }
+
+         .custom-select-options-lists-container {
+            width: 100%;
+            max-height: 200px;
+            overflow: auto;
+            scrollbar-width: thin;
+            padding-right: 2px;
+
+            .custom-select-options-list {
+               width: 100%;
+               display: flex;
+               flex-direction: column;
+               gap: 2px;
+
+               .custom-select-option {
+                  width: 100%;
+                  padding: 6px 10px;
+                  border-radius: 6px;
+                  cursor: pointer;
+
+                  &[data__option__active],
+                  &:hover {
+                     background-color: #eeeeee;
+
+                     span {
+                        color: #000000;
+                     }
+                  }
+
+                  span {
+                     width: 100%;
+                     display: block;
+                     font-size: 14px;
+                     color: #2b2b2b;
                   }
                }
             }

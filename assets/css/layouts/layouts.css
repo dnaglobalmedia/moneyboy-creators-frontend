@@ -137,9 +137,3 @@
       }
    }
 }
-
-/* --------------------------------------------------------------------------
-   Responsive Styles Import
-   - Imports the separate file containing all media queries and viewport adjustments.
-   -------------------------------------------------------------------------- */
-@import url('./responsive.css');

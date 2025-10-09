@@ -151,6 +151,3 @@
     gap: 10px;
     padding-top: 20px;
 }
-
-/* Responsive Styles Import */
-@import url('./responsive.css');

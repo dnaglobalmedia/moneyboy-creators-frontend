@@ -66,15 +66,15 @@
     /* Focus State (High Fidelity): Driven by :has(input:focus) on the wrapper */
     &:has(input:focus) {
         input {
-            border-color: #000000;
-            box-shadow: 0px 6px 4px -4px #08080814, 0px 2px 13.5px 1px #08080818;
+            border-color: #101010;
+            box-shadow: 0px 6px 4px -4px #0808080a, 0px 2px 13.5px 1px #0808080e;
             /* Prominent elevation */
-            color: #000000;
+            color: #101010;
         }
 
         .input-placeholder-icon {
             .svg-icon path {
-                stroke: #000000;
+                stroke: #101010;
                 /* High contrast icon */
             }
         }

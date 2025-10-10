@@ -1,4 +1,65 @@
 @media (max-width: 1620px) {
+    .header-main {
+        .header-container {
+            .header-logo {
+                a {
+                    img {
+                        height: 42px;
+                    }
+                }
+            }
+
+            .header-search-nav-profile-container {
+                .header-search-input {
+                    input {
+                        min-height: 44px;
+                    }
+                }
+
+                .header-navigation {
+                    nav {
+                        ul {
+                            li {
+                                a {
+                                    width: 42px;
+
+                                    svg {
+                                        width: 22px;
+                                    }
+
+                                    &:hover,
+                                    &.active {
+                                        svg {
+                                            path {}
+                                        }
+                                    }
+
+                                    &:active {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .header-profile-avatar {
+                    border-radius: 18px;
+
+                    .profile-avatar {
+                        width: 48px;
+
+                        img {
+                            border-radius: inherit;
+                        }
+                    }
+
+                    &:hover {
+                        &:active {}
+                    }
+                }
+            }
+        }
+    }
+
     .sidbar-navigation {
         padding: 16px;
 

@@ -1,3 +1,60 @@
+@media (max-width: 1620px) {
+    .moneyboy-layout-container {
+        .header-main {}
+
+        .moneyboy-main-asides-layout-container {
+
+            /* Conditional Styling: Adjusts sidebar width when a custom scrollbar is present (via the `has-scroll` class) */
+            &:has(.moneyboy-global-sidebar-wrapper.has-scroll) {
+                .moneyboy-global-sidebar-wrapper {}
+            }
+
+            /* Global Sidebar Wrapper: Defines the structural constraints for the left navigation/sidebar */
+            .moneyboy-global-sidebar-wrapper {
+                &:hover {}
+
+                /* Sidebar Content Alignment */
+                .global-sidebar-container {
+                    .sidebar-profile-card {}
+
+                    /* Placeholder for component styling */
+                    .sidebar-post-button {}
+
+                    /* Placeholder for component styling */
+                    .sidebar-navigation-container {}
+
+                    /* Placeholder for component styling */
+                    .sidebar-footer-card.card {}
+                }
+            }
+
+            /* Main Page Content Area: Primary flexible container */
+            .moneyboy-page-content-container {
+
+                /* Dynamic Content Wrapper */
+                .moneyboy-dynamic-content-layout {
+
+                    /* 2-Column Responsive Grid (2x / 1x pattern) */
+                    .moneyboy-2x-1x-layout-container {
+                        .moneyboy-2x-1x-a-layout {}
+
+                        .moneyboy-2x-1x-b-layout {}
+
+                        /* Specific Page Layout Override (e.g., Creator Profile) */
+                        .creator-profile-page-container {
+                            .creator-profile-front-content-container {
+                                .creator-profile-page-multi-tab-section {
+                                    .creator-profile-page-multi-tab-container {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1280px) {
     .sidebar-footer-card {
         display: none;

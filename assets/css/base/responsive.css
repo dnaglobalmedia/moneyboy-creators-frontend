@@ -1,7 +1,8 @@
 @media (max-width: 1620px) {
     :root {
-        --sidebar-width: 300px;
-        --right-aside-width: 370px;
+        --header-height: 64px;
+        --sidebar-width: 260px;
+        --right-aside-width: 350px;
     }
 }
 

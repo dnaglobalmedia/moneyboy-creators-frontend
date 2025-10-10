@@ -62,11 +62,13 @@
 
     .sidbar-navigation {
         padding: 16px;
+        padding: 12px;
 
         ul {
             li {
                 a {
                     padding: 10px 12px;
+                    padding: 8px 12px;
 
                     div {
                         svg {

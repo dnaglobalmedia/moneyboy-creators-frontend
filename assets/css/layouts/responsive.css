@@ -55,7 +55,11 @@
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1280px) and (min-width: 992px) {
+    :root {
+        /* --sidebar-width: 260px; */
+    }
+
     .sidebar-footer-card {
         display: none;
     }
@@ -125,9 +129,69 @@
             }
         }
     }
+
+    .sidbar-navigation {
+        box-shadow: none;
+        padding: 5px;
+
+        ul {
+            li {
+                a {
+                    aspect-ratio: 1/1;
+                    width: 100%;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
+
+                    div {
+                        svg {
+                            width: 30px;
+
+                            path {}
+                        }
+
+                        span {
+                            display: none;
+                        }
+                    }
+
+                    &.active,
+                    &:hover {
+                        div {
+                            svg {
+                                &.wishlist-icon {
+                                    path:nth-child(3) {}
+                                }
+
+                                path {}
+                            }
+
+                            span {}
+                        }
+                    }
+
+                    &.active {
+                        div {
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
+    :root {
+        --sidebar-width: 260px;
+    }
+
     .moneyboy-layout-container {
         & .moneyboy-main-asides-layout-container {
             & .moneyboy-global-sidebar-wrapper {
@@ -157,8 +221,12 @@
             .moneyboy-page-content-container {
                 & .moneyboy-dynamic-content-layout {
                     & .moneyboy-2x-1x-layout-container {
+                        flex-direction: column;
+
                         .moneyboy-2x-1x-b-layout {
-                            display: none;
+                            /* display: none; */
+                            max-width: 100%;
+                            width: 100%;
                         }
                     }
                 }
@@ -167,44 +235,93 @@
     }
 }
 
-@media (max-width: 620px) {
-    .moneyboy-layout-container {
-        & .moneyboy-main-asides-layout-container {
-            & .moneyboy-global-sidebar-wrapper {
-                padding-top: 8px;
+@media (max-width: 768px) {
+    :root {
+        --sidebar-width: 100%;
+    }
 
-                & .global-sidebar-container {
-                    padding: 6px;
+    .mobile-navigations-container {
+        display: block;
+    }
+
+    .moneyboy-layout-container {
+        .header-main {}
+
+        .moneyboy-main-asides-layout-container {
+            flex-direction: column-reverse;
+            gap: 8px;
+            padding: 10px 0 90px;
+
+            /* Conditional Styling: Adjusts sidebar width when a custom scrollbar is present (via the `has-scroll` class) */
+            &:has(.moneyboy-global-sidebar-wrapper.has-scroll) {
+                .moneyboy-global-sidebar-wrapper {}
+            }
+
+            /* Global Sidebar Wrapper: Defines the structural constraints for the left navigation/sidebar */
+            .moneyboy-global-sidebar-wrapper {
+                padding: 0;
+                width: 100%;
+                max-width: 100%;
+                min-width: 100%;
+                padding: 0;
+                margin: 0;
+                border-radius: 18px;
+
+                &:hover {}
+
+                /* Sidebar Content Alignment */
+                .global-sidebar-container {
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
 
                     .sidebar-profile-card {
-                        .profile-card {
-                            .profile-card__main {
-                                .profile-card__info {}
-                            }
-                        }
+                        display: none;
                     }
 
+                    /* Placeholder for component styling */
                     .sidebar-post-button {
-                        .btn-primary {
-                            svg {
-                                transform: scale(1);
-                            }
-
-                            span {}
-                        }
+                        display: none;
                     }
 
-                    .sidebar-navigation-container {}
+                    /* Placeholder for component styling */
+                    .sidebar-navigation-container {
+                        display: none;
+                    }
+
+                    /* Placeholder for component styling */
+                    .sidebar-footer-card.card {
+                        border-radius: inherit;
+                    }
                 }
             }
 
+            /* Main Page Content Area: Primary flexible container */
             .moneyboy-page-content-container {
-                & .moneyboy-dynamic-content-layout {
-                    & .moneyboy-2x-1x-layout-container {
+                padding: 0;
+
+                /* Dynamic Content Wrapper */
+                .moneyboy-dynamic-content-layout {
+
+                    /* 2-Column Responsive Grid (2x / 1x pattern) */
+                    .moneyboy-2x-1x-layout-container {
+                        .moneyboy-2x-1x-a-layout {}
+
                         .moneyboy-2x-1x-b-layout {}
+
+                        /* Specific Page Layout Override (e.g., Creator Profile) */
+                        .creator-profile-page-container {
+                            .creator-profile-front-content-container {
+                                .creator-profile-page-multi-tab-section {
+                                    .creator-profile-page-multi-tab-container {}
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }
+
+@media (max-width: 620px) {}

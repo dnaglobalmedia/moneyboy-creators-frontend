@@ -21,3 +21,6 @@ import "./components/custom-select.js";
 
 // Advanced Filters Layout Toggle Functionality
 import "./components/advanced-filters.js";
+
+// Floating Menu Toggle Functionality
+import "./components/menu-toggle.js";

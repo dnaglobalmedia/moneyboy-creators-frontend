@@ -674,12 +674,23 @@
 
             .header-search-nav-profile-container {
                 .header-search-input {
-                    width: 200px;
+                    display: none;
+                }
 
-                    &:has(input:focus) {
-                        width: 250px !important;
+                /* ---------------------- */
+                .header-navigation {
+                    nav {
+                        ul {
+                            li {
+                                &.message-btn {
+                                    display: none;
+                                }
+                            }
+                        }
                     }
                 }
+
+                /* ---------------------- */
             }
         }
     }
@@ -735,9 +746,9 @@
         .profile-card__main {
             .profile-card__avatar-settings {
                 .profile-card__avatar {
-                    width: 100%;
-                    border-radius: 14px;
 
+                    /* width: 100%; */
+                    /* border-radius: 14px; */
                     img {}
                 }
 
@@ -778,8 +789,8 @@
         }
 
         .profile-card__stats {
-            display: none;
 
+            /* display: none; */
             .profile-card__stats-item {
                 &:hover {
 

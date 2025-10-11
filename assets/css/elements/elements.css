@@ -147,6 +147,7 @@
     justify-content: center;
     box-shadow: 0px 4px 4px 0px #00000012;
     transition: var(--transition-fast);
+    will-change: transform;
 
     &.p-sm {
         padding: 12px;
@@ -161,17 +162,30 @@
         display: inline-block;
         letter-spacing: 0.25px;
         background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
-        -webkit-background-clip: text;
         background-clip: text;
-        -webkit-text-fill-color: transparent;
+        /* -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
         color: transparent;
         /* Fallback for browsers not supporting text-fill-color */
         line-height: 17px;
+        transition: var(--transition-fast);
     }
 
     &:hover {
-        filter: brightness(120%);
+        /* filter: brightness(120%); */
         /* Simple visual feedback on hover */
+        background: linear-gradient(93.25deg, #E5741F -49.57%, #FECE26 98.1%);
+        color: white;
+
+        span {
+            background-clip: initial;
+            background: none;
+            color: #ffffff;
+        }
+    }
+
+    &:active {
+        transform: scale(.95);
     }
 }
 

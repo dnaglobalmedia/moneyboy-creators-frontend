@@ -973,6 +973,55 @@
    display: flex;
    flex-direction: column;
 
+   &.user-profile-card {
+      .creator-profile-info-container {
+         .profile-card {
+            .profile-info-buttons {
+               .creator-profile-buttons {
+                  padding-bottom: 10px;
+
+                  ul {
+                     li {
+                        a {
+                           width: 46px;
+                           aspect-ratio: 1/1;
+                           display: grid;
+                           place-items: center;
+                           border-radius: 100%;
+                           backface-visibility: hidden;
+                           transition: var(--transition-fast);
+                           will-change: transform;
+
+                           svg {
+                              backface-visibility: hidden;
+                              transition: var(--transition-fast);
+                              display: block;
+                           }
+
+                           &:hover,
+                           &.active {
+                              background: var(--color-text-active);
+                              box-shadow: 0px 2px 3px -1px #000000;
+
+                              svg {
+                                 path {
+                                    stroke: var(--color-secondary);
+                                 }
+                              }
+                           }
+
+                           &:active {
+                              transform: scale(.95);
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
    .creator-profile-banner {
       display: flex;
       width: 100%;
@@ -1067,11 +1116,32 @@
 
                   li {
                      display: flex;
-                     cursor: pointer;
 
-                     svg {
-                        path {
-                           stroke: #000000;
+                     a {
+                        transition: var(--transition-fast);
+                        cursor: pointer;
+                        display: flex;
+
+                        svg {
+                           path {
+                              stroke: #141414;
+                           }
+                        }
+
+                        &:hover,
+                        &.active {
+
+                           /* background: var(--color-text-active); */
+                           /* box-shadow: 0px 2px 3px -1px #000000; */
+                           svg {
+                              path {
+                                 stroke: var(--color-text-active);
+                              }
+                           }
+                        }
+
+                        &:active {
+                           transform: scale(.9);
                         }
                      }
                   }
@@ -1206,11 +1276,16 @@
                li {
                   padding: 8px 8px 8px 16px;
                   border-radius: 12px;
-                  background-color: #F4F4F4;
+                  background-color: #f4f4f4;
                   display: flex;
+                  transition: var(--transition-fast);
                   align-items: center;
                   justify-content: space-between;
                   border: 1.5px solid #e5e5e506;
+
+                  &:hover {
+                     background-color: #f0f0f0;
+                  }
 
                   .subscription-info {
                      display: flex;

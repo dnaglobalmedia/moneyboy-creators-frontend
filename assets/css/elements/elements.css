@@ -278,6 +278,23 @@
     background-color: #F9F9F9;
     width: 100%;
 
+    &.bg-white {
+        background-color: #FFFFFF;
+        border: 1.5px solid #EBEBEB;
+    }
+
+    &.p-sm {
+        border-radius: 12px;
+
+        .custom-select-label-wrapper {
+            padding: 14px;
+        }
+
+        .custom-select-options-dropdown-wrapper {
+            border-radius: 16px;
+        }
+    }
+
     .custom-select-label-wrapper {
         display: flex;
         align-items: center;

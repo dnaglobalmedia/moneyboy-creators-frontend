@@ -276,6 +276,7 @@
     display: flex;
     position: relative;
     background-color: #F9F9F9;
+    width: 100%;
 
     .custom-select-label-wrapper {
         display: flex;

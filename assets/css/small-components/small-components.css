@@ -229,7 +229,7 @@
 
                 .profile-card__stats-num,
                 .profile-card__stats-label span {
-                    color: var(--color-text-active);
+                    /* color: var(--color-text-active); */
                 }
 
                 .profile-card__stats-label {
@@ -409,18 +409,47 @@
                     border-radius: 100%;
                     cursor: pointer;
 
-                    &:hover {
-                        svg {
-                            scale: 1.1;
-                        }
-                    }
-
                     svg {
                         will-change: transform;
                         transition: var(--transition-fast);
 
                         path {
                             stroke: white;
+                        }
+                    }
+
+                    &:hover {
+                        svg {
+                            /* scale: 1.1; */
+                        }
+                    }
+
+                    &:active {
+                        svg {
+                            transform: scale(.9);
+                        }
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &.active {
+                        svg {
+                            path {
+                                &:nth-child(1) {
+                                    stroke: #6C5CE7;
+                                    fill: #6C5CE7;
+                                }
+
+                                &:nth-child(2) {
+                                    stroke: #6C5CE7;
+                                    fill: #6C5CE7;
+                                }
+
+                                &:nth-child(3) {
+                                    stroke: #ffffff;
+                                    fill: #ffffff;
+                                }
+                            }
                         }
                     }
                 }
@@ -544,6 +573,8 @@
                 gap: 10px;
 
                 svg {
+                    transition: var(--transition-fast);
+
                     path {
                         stroke: #505050;
                     }
@@ -555,6 +586,29 @@
                     line-height: 26px;
                     letter-spacing: 3%;
                     color: #444444;
+                }
+
+                &:nth-child(2) {
+                    button {
+                        display: flex;
+                        cursor: pointer;
+
+                        &:hover {
+                            svg {
+                                path {
+                                    &:nth-child(1) {
+                                        stroke: #A77BFF;
+                                        fill: #A77BFF;
+                                    }
+
+                                    &:nth-child(2) {
+                                        stroke: #A77BFF;
+                                        fill: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

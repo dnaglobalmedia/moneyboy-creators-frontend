@@ -161,7 +161,6 @@
     justify-content: center;
     backdrop-filter: blur(14px);
     border-radius: 50%;
-    overflow: hidden;
     transition: var(--transition-fast);
     cursor: pointer;
     backface-visibility: hidden;

@@ -319,8 +319,39 @@
                            padding: 14px 16px;
 
                            span {
+                              transition: var(--transition-fast);
                               display: block;
                               margin-right: auto;
+                           }
+
+                           svg {
+                              transition: var(--transition-fast);
+
+                              &.arrow-icon {
+                                 path {
+                                    stroke: #fff;
+                                 }
+                              }
+                           }
+
+                           &:hover {
+                              &::before {
+                                 opacity: 0;
+                              }
+
+                              span {
+                                 background: none;
+                                 -webkit-background-clip: none;
+                                 background-clip: none;
+                                 -webkit-text-fill-color: unset;
+                                 color: white;
+                              }
+
+                              svg {
+                                 path {
+                                    stroke: white;
+                                 }
+                              }
                            }
                         }
 
@@ -335,12 +366,6 @@
                                  stroke-width: 1.5px;
                               }
                            }
-
-                           &.arrow-icon {
-                              path {
-                                 stroke: #fff;
-                              }
-                           }
                         }
 
                         span {
@@ -352,13 +377,272 @@
                            color: #444444;
                         }
 
-                        &:hover {
+                        &:not(.premium-btn):hover {
                            svg {
                               transform: scale(1.05) translateY(-2px);
                            }
 
                            span {
                               color: #000000;
+                           }
+
+                           /* Hover Effects */
+                           &.my-profile-link {
+                              svg path {
+                                 fill: var(--color-text-active);
+                                 stroke: var(--color-text-active);
+                              }
+                           }
+
+                           &.edit-profile-link {
+                              svg path {
+                                 &:nth-child(1) {
+                                    fill: #000;
+                                 }
+
+                                 &:nth-child(2) {
+                                    fill: #000;
+                                 }
+                              }
+                           }
+
+                           &.blacklist-link {
+                              svg path {
+                                 &:nth-child(1) {
+                                    fill: #000;
+                                 }
+
+                                 &:nth-child(2) {
+                                    fill: #000;
+                                 }
+                              }
+                           }
+
+                           &.block-countries-link {
+                              svg path {
+                                 &:nth-child(1) {
+                                    fill: #000;
+                                    stroke: #fff;
+                                 }
+
+                                 &:nth-child(2) {
+                                    stroke: #fff;
+                                 }
+                              }
+                           }
+
+                           &.add-payment-method-link {
+                              svg path {
+                                 &:nth-child(5) {
+                                    fill: black;
+                                 }
+
+                                 &:nth-child(6) {
+                                    fill: #ffffff;
+                                 }
+                              }
+                           }
+
+                           &.banking-to-earn-link {
+                              svg path {
+                                 &:nth-child(1) {
+                                    fill: black;
+                                 }
+
+                                 &:nth-child(2) {
+                                    fill: black;
+                                 }
+
+                                 &:nth-child(9) {
+                                    fill: #000000;
+                                    stroke: #ffffff;
+                                 }
+                              }
+                           }
+
+                           &.like-link {
+                              svg path {
+                                 fill: #000;
+                              }
+                           }
+
+                           &.posts-link {
+                              svg path {
+                                 &:nth-child(1) {
+                                    fill: black;
+                                 }
+
+                                 &:nth-child(2) {
+                                    fill: #fff;
+                                 }
+
+                                 &:nth-child(3) {
+                                    stroke: #fff;
+                                 }
+
+                                 &:nth-child(4) {
+                                    stroke: #fff;
+                                 }
+                              }
+                           }
+
+                           &.videos-link {
+                              svg path {
+                                 &:nth-child(1) {
+                                    fill: black;
+                                 }
+
+                                 &:nth-child(2) {
+                                    fill: #000000;
+                                 }
+
+                                 &:nth-child(3) {
+                                    stroke: #fff;
+                                    fill: #000000;
+                                 }
+                              }
+                           }
+
+                           &.photos-link {
+                              svg path {
+                                 &:nth-child(1) {
+                                    fill: black;
+                                 }
+
+                                 &:nth-child(2) {
+                                    stroke: #fff;
+                                    fill: #000000;
+                                 }
+
+                                 &:nth-child(3) {
+                                    stroke: #fff;
+                                 }
+                              }
+                           }
+
+                           &.followers-link {
+                              svg path {
+                                 fill: black;
+                                 stroke: #000;
+                              }
+                           }
+
+                           &.following-link {
+                              svg path {
+                                 fill: black;
+                                 stroke: #000;
+                              }
+                           }
+
+                           &.wishlist-link {
+                              svg path {
+                                 &:nth-child(1) {
+                                    fill: #000000;
+                                 }
+
+                                 &:nth-child(2) {
+                                    fill: #000000;
+                                 }
+
+                                 &:nth-child(3) {
+                                    stroke: #ffffff;
+                                 }
+                              }
+                           }
+
+                           &.purchased-media-link {
+                              svg path {
+                                 fill: black;
+                                 stroke: #000;
+                              }
+                           }
+
+                           &.store-link {
+                              svg path {
+                                 fill: rgb(0, 0, 0);
+                                 stroke: white;
+                              }
+                           }
+
+                           &.wallet-transactions-link {
+                              svg path {
+                                 &:nth-child(1) {
+                                    fill: #000000;
+                                 }
+
+                                 &:nth-child(3) {
+                                    fill: #ffffff;
+                                 }
+
+                                 &:nth-child(4) {
+                                    fill: #ffffff;
+                                    stroke: white;
+                                 }
+                              }
+                           }
+
+                           &.order-history-link {
+                              svg path {
+                                 &:nth-child(2) {
+                                    fill: #000000;
+                                 }
+
+                                 &:nth-child(3) {
+                                    stroke: #fff;
+                                    fill: #ffffff;
+                                 }
+
+                                 &:nth-child(4) {
+                                    stroke: #fff;
+                                    fill: #ffffff;
+                                 }
+                              }
+                           }
+
+                           &.payment-history-link {
+                              svg path {
+                                 &:nth-child(2) {
+                                    fill: #000000;
+                                 }
+
+                                 &:nth-child(3) {
+                                    stroke: #fff;
+                                    fill: #ffffff;
+                                 }
+
+                                 &:nth-child(4) {
+                                    stroke: #fff;
+                                    fill: #ffffff;
+                                 }
+                              }
+                           }
+
+                           &.payout-requests-link {
+                              svg path {
+                                 &:nth-child(1) {
+                                    fill: #000000;
+                                 }
+
+                                 &:nth-child(2) {
+                                    stroke: #ffffff;
+                                 }
+
+                                 &:nth-child(3) {
+                                    stroke: #fff;
+                                 }
+
+                                 &:nth-child(4) {
+                                    stroke: #000000;
+                                 }
+                              }
+                           }
+
+                           &.sign-out-link {
+                              svg path {
+                                 &:nth-child(1) {
+                                    fill: #000000;
+                                 }
+                              }
                            }
                         }
                      }
@@ -889,17 +1173,13 @@
                               svg {
                                  path {
                                     &:nth-child(1) {
-                                       stroke: var(--color-primary);
-                                       fill: var(--color-primary);
+                                       stroke: #F5AD23;
+                                       fill: #F5AD23;
                                     }
 
                                     &:nth-child(2) {
-                                       stroke: var(--color-primary);
+                                       stroke: #F5AD23;
                                     }
-
-                                    &:nth-child(3),
-                                    &:nth-child(4),
-                                    &:nth-child(5) {}
                                  }
                               }
 
@@ -970,6 +1250,97 @@
                      }
                   }
                }
+
+               &:nth-child(2) {
+                  li {
+                     &:nth-child(1) {
+                        a {
+                           svg {}
+
+                           span {}
+
+                           &:active {
+                              svg {}
+                           }
+
+                           &:hover {
+                              svg {
+                                 path {
+                                    &:nth-child(1) {
+                                       stroke: #E84C88;
+                                       fill: #E84C88;
+                                    }
+
+                                    &:nth-child(2) {
+                                       stroke: #E84C88;
+                                       fill: #E84C88;
+                                    }
+
+                                    &:nth-child(3),
+                                    &:nth-child(4),
+                                    &:nth-child(5) {}
+                                 }
+                              }
+
+                              span {}
+                           }
+                        }
+                     }
+
+                     &:nth-child(2) {
+                        a {
+                           svg {}
+
+                           span {}
+
+                           &:active {
+                              svg {}
+                           }
+
+                           &:hover {
+                              svg {
+                                 path {
+
+                                    /* stroke: var(--like-color);
+                                    fill: var(--like-color); */
+                                    &:nth-child(1) {
+                                       stroke: #6C5CE7;
+                                       fill: #6C5CE7;
+                                       position: relative;
+                                       z-index: 2;
+                                    }
+
+                                    &:nth-child(2) {
+                                       stroke: #6C5CE7;
+                                       fill: #6C5CE7;
+                                    }
+
+                                    &:nth-child(3) {
+                                       stroke: #ffffff;
+                                       fill: #ffffff;
+                                    }
+                                 }
+                              }
+
+                              span {}
+                           }
+
+                           &.post-like-btn {
+                              &.liked {
+                                 svg {
+                                    animation: heartLikedPopUpAnimation 0.45s ease-out;
+
+                                    path {
+                                       fill: var(--like-color);
+                                       stroke: var(--like-color);
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
             }
          }
       }
@@ -990,27 +1361,7 @@
                   padding-bottom: 10px;
 
                   ul {
-                     li {
-                        a {
-
-                           &:hover,
-                           &.active {
-                              background: var(--color-text-active);
-                              box-shadow: 0px 2px 3px -1px #000000;
-                              background-color: var(--color-text-active) !important;
-
-                              svg {
-                                 path {
-                                    stroke: var(--color-secondary);
-                                 }
-                              }
-                           }
-
-                           &:active {
-                              transform: scale(.95);
-                           }
-                        }
-                     }
+                     li {}
                   }
                }
             }
@@ -1136,6 +1487,124 @@
                         transition: var(--transition-fast);
                         will-change: transform;
 
+                        &.save-btn {
+
+                           &:hover,
+                           &:focus,
+                           &.active {
+                              svg {
+                                 path {
+                                    &:nth-child(1) {
+                                       stroke: #6C5CE7;
+                                       fill: #6C5CE7;
+                                    }
+
+                                    &:nth-child(2) {
+                                       stroke: #6C5CE7;
+                                       fill: #6C5CE7;
+                                    }
+
+                                    &:nth-child(3) {
+                                       stroke: #ffffff;
+                                       fill: #ffffff;
+                                    }
+                                 }
+                              }
+                           }
+                        }
+
+                        &.tip-btn {
+
+                           &:hover,
+                           &:focus,
+                           &.active {
+                              svg {
+                                 path {
+                                    &:nth-child(1) {
+                                       stroke: #F5AD23;
+                                       fill: #F5AD23;
+                                    }
+
+                                    &:nth-child(2) {
+                                       stroke: #F5AD23;
+                                    }
+
+                                    &:nth-child(3) {
+                                       stroke: #ffffff;
+                                    }
+
+                                    &:nth-child(4) {
+                                       stroke: #ffffff;
+                                    }
+
+                                    &:nth-child(5) {
+                                       stroke: #ffffff;
+                                    }
+                                 }
+                              }
+                           }
+                        }
+
+                        &.share-btn {
+
+                           &:hover,
+                           &:focus,
+                           &.active {
+                              svg {
+                                 path {
+                                    &:nth-child(1) {
+                                       stroke: #00BFA5;
+                                    }
+
+                                    &:nth-child(2) {
+                                       stroke: #00BFA5;
+                                    }
+
+                                    &:nth-child(3) {
+                                       stroke: #00BFA5;
+                                    }
+                                 }
+                              }
+                           }
+                        }
+
+                        &.like-btn {
+
+                           &:hover,
+                           &:focus,
+                           &.active {
+                              svg {
+                                 path {
+                                    &:nth-child(1) {
+                                       stroke: var(--like-color);
+                                       fill: var(--like-color);
+                                    }
+                                 }
+                              }
+                           }
+                        }
+
+                        &.message-btn {
+
+                           &:hover,
+                           &:focus,
+                           &.active {
+                              background: var(--color-text-active);
+                              background-color: var(--color-text-active) !important;
+                              box-shadow: 0px 2px 3px -1px #000000;
+
+                              svg {
+                                 path {
+                                    stroke: var(--color-secondary);
+                                 }
+                              }
+                           }
+
+                           &:active {
+                              transform: scale(.95);
+                           }
+                        }
+
                         svg {
                            backface-visibility: hidden;
                            transition: var(--transition-fast);
@@ -1147,15 +1616,14 @@
                            }
                         }
 
-                        &:not(.no-hover) {
+                        /* &:not(.no-hover) {
 
                            &:hover,
                            &.active {
                               background: var(--color-text-active);
                               background: #ecececb7;
                            }
-                        }
-
+                        } */
                         &:hover,
                         &.active {
                            svg {
@@ -1208,14 +1676,34 @@
                &:hover {
                   svg {
                      transform: scale(1.1) translateY(-2px);
+                  }
+               }
 
-                     path {
-                        stroke: var(--color-text-active);
+               &:nth-child(1) {
+                  &:hover {
+                     svg {
+                        path {
+                           stroke: #26A69A;
+                        }
+                     }
+
+                     span {
+                        color: #26A69A;
                      }
                   }
+               }
 
-                  span {
-                     color: var(--color-text-active);
+               &:nth-child(2) {
+                  &:hover {
+                     svg {
+                        path {
+                           stroke: #BDBDBD;
+                        }
+                     }
+
+                     span {
+                        color: #BDBDBD;
+                     }
                   }
                }
             }
@@ -1255,19 +1743,32 @@
                   gap: 10px;
 
                   &:hover {
+                     svg {
+                        transform: scale(1.05) translateY(-2px);
+
+                        path {
+                           stroke: #FF9F43;
+                        }
+                     }
+
                      span {
                         text-decoration: underline;
+                        color: #FF9F43;
                         text-underline-offset: 2px;
                      }
                   }
 
                   svg {
+                     transition: var(--transition-fast);
+                     will-change: transform;
+
                      path {
                         stroke: #505050;
                      }
                   }
 
                   span {
+                     transition: var(--transition-fast);
                      font-weight: 600;
                      font-size: 14px;
                      line-height: 26px;

@@ -100,6 +100,8 @@
     overflow: hidden;
     /* Important for containing future ripple/hover effects */
     transition: var(--transition-fast);
+    border-radius: 14px;
+    padding-block: 20px;
 
     span {
         font-family: var(--font-family-heading);
@@ -109,6 +111,7 @@
         letter-spacing: 4%;
         position: relative;
         transition: var(--transition-fast);
+        font-size: 19px;
     }
 
     svg {

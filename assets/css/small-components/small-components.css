@@ -7,6 +7,7 @@
     gap: 10px;
     transition: var(--transition-fast);
     position: relative;
+    padding: 14px;
 
     &.featured-profile-card {
         padding: 14px;
@@ -14,12 +15,16 @@
         border-radius: 20px;
         transition: var(--transition-normal);
         will-change: transform;
+        padding: 12px;
+        border-radius: 20px;
 
         .profile-card__main {
             .profile-card__avatar-settings {
                 .profile-card__avatar {
                     width: 61px;
                     position: relative;
+                    width: 54px;
+                    border-radius: 16px;
 
                     &::before {
                         content: '';
@@ -44,6 +49,7 @@
                         font-size: 20px;
                         line-height: 100%;
                         text-transform: capitalize;
+                        font-size: 18px;
                     }
 
                     .profile-card__badge {
@@ -59,6 +65,7 @@
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 100%;
+                    font-size: 15px;
 
                     &:hover {
                         color: white;
@@ -129,6 +136,7 @@
                 aspect-ratio: 1/1;
                 overflow: hidden;
                 border-radius: 21px;
+                width: 70px;
 
                 img {
                     width: 100%;
@@ -167,10 +175,10 @@
                 .profile-card__name {
                     font-family: var(--font-family-heading);
                     font-weight: 500;
-                    font-size: 24px;
                     font-style: normal;
                     line-height: 100%;
                     color: var(--color-text-active);
+                    font-size: 20px;
                 }
 
                 .profile-card__badge {
@@ -178,7 +186,7 @@
                     align-items: center;
 
                     img {
-                        width: 27px;
+                        width: 24px;
                     }
                 }
             }
@@ -218,12 +226,16 @@
         justify-content: center;
         gap: 20px;
         padding: 16px 21px 10px;
+        padding: 14px 8px 10px;
+        gap: 16px;
+        border-radius: 16px;
 
         .profile-card__stats-item {
             display: flex;
             flex-direction: column;
             gap: 8px;
             cursor: pointer;
+            gap: 6px;
 
             &:hover {
 
@@ -249,6 +261,7 @@
                 letter-spacing: 0px;
                 transition: var(--transition-fast);
                 color: #444444;
+                font-size: 18px;
             }
 
             .profile-card__stats-label {

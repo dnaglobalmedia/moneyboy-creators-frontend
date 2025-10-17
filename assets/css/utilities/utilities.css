@@ -5,10 +5,11 @@
    -------------------------------------------------------------------------- */
 /* Layout Container: Enforces maximum content width and central alignment */
 .container {
-    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    max-width: calc(100% - 100px);
+    width: calc(100% - 100px);
+    max-width: 1400px;
+    max-width: 1280px;
 }
 
 /* Base Card Component (Aggregate) Styling

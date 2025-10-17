@@ -334,6 +334,37 @@
         -webkit-text-fill-color: transparent;
         color: transparent;
     }
+
+    &[data-content-advanced-filters-toggle-button] {
+        &:hover {
+            svg {
+                path {
+                    fill: white;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        &::before {
+            opacity: 0;
+        }
+
+        span {
+            background: none;
+            -webkit-background-clip: none;
+            background-clip: none;
+            -webkit-text-fill-color: unset;
+            color: white !important;
+        }
+
+        svg {
+            path {
+                stroke: white;
+                /* fill: white; */
+            }
+        }
+    }
 }
 
 .custom-select-element {

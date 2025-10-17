@@ -137,6 +137,8 @@
                 overflow: hidden;
                 border-radius: 21px;
                 width: 70px;
+                border-radius: 18px;
+                width: 68px;
 
                 img {
                     width: 100%;
@@ -151,14 +153,18 @@
                 bottom: 0;
                 right: 0;
                 width: 30px;
+                width: 26px;
                 aspect-ratio: 1/1;
                 border-radius: 11px;
+                border-radius: 8px;
                 display: grid;
                 place-items: center;
                 background-color: white;
                 box-shadow: 0px 6px 4px -4px #08080803, 0px 2px 1.5px -4px #0808080A, 0px 4px 4px 0px #00000017;
 
-                svg {}
+                svg {
+                    width: 18px;
+                }
             }
         }
 
@@ -179,6 +185,7 @@
                     line-height: 100%;
                     color: var(--color-text-active);
                     font-size: 20px;
+                    font-size: 19px;
                 }
 
                 .profile-card__badge {
@@ -198,6 +205,7 @@
                 line-height: 100%;
                 color: #505050;
                 transition: var(--transition-fast);
+                font-size: 15px;
 
                 &:hover {
                     color: #000000;
@@ -226,7 +234,7 @@
         justify-content: center;
         gap: 20px;
         padding: 16px 21px 10px;
-        padding: 14px 8px 10px;
+        padding: 12px 8px 8px;
         gap: 16px;
         border-radius: 16px;
 

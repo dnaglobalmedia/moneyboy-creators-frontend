@@ -685,6 +685,8 @@
             transition: var(--transition-fast);
             border-radius: 15px;
             padding: 8px 12px;
+            border-radius: 12px;
+            padding: 6px 10px;
 
             div {
                display: flex;
@@ -698,6 +700,7 @@
                   justify-content: center;
                   transition: var(--transition-fast);
                   width: 28px;
+                  width: 24px;
 
                   path {
                      transition: var(--transition-fast);
@@ -713,6 +716,7 @@
                   text-transform: capitalize;
                   color: var(--color-text-active);
                   font-size: 20px;
+                  font-size: 18px;
                }
             }
 
@@ -769,7 +773,7 @@
          display: flex;
          flex-wrap: wrap;
          justify-content: center;
-         row-gap: 2px;
+         /* row-gap: 2px; */
          column-gap: 2px;
 
          li {
@@ -783,6 +787,7 @@
                padding: 3px 6px;
                transition: var(--transition-fast);
                text-underline-offset: 2px;
+               padding: 0px 6px;
 
                &:focus,
                &:hover {

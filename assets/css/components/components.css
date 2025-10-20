@@ -905,8 +905,9 @@
    gap: var(--spacing-md);
 
    .moneyboy-feed-page-cate-buttons {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      /* display: grid; */
+      /* grid-template-columns: 1fr 1fr 1fr; */
+      display: flex;
       gap: 20px;
       gap: 12px;
       transition: var(--transition-normal);
@@ -940,9 +941,10 @@
          padding: 15px 0px;
          font-size: 18px;
          border-radius: 14px;
+         width: 100%;
 
          &:hover,
-         &.active {
+         &[data__active] {
             background-color: #010405;
             color: #FECE26;
          }
@@ -2129,64 +2131,64 @@
    display: flex;
    flex-direction: column;
    gap: 10px;
+}
 
-   .search-features-grid-btns {
+.search-features-grid-btns {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: #F4F4F4;
+   border-radius: 20px;
+   padding: 10px;
+   gap: 10px;
+
+   .creator-content-search-input {
+      width: 36%;
+
+      .label-input {
+         background: #FFFFFF;
+      }
+   }
+
+   .creater-content-filters-layouts {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      background: #F4F4F4;
-      border-radius: 20px;
-      padding: 10px;
-      gap: 10px;
+      gap: 16px;
 
-      .creator-content-search-input {
-         width: 36%;
-
-         .label-input {
-            background: #FFFFFF;
-         }
+      .creator-content-select-filter {
+         width: max-content;
+         display: flex;
       }
 
-      .creater-content-filters-layouts {
+      .creator-content-grid-layout-options {
          display: flex;
          align-items: center;
          gap: 16px;
+         cursor: pointer;
 
-         .creator-content-select-filter {
-            width: max-content;
+         .creator-content-grid-layout-btn {
             display: flex;
-         }
-
-         .creator-content-grid-layout-options {
-            display: flex;
-            align-items: center;
-            gap: 16px;
             cursor: pointer;
 
-            .creator-content-grid-layout-btn {
-               display: flex;
-               cursor: pointer;
+            svg {
+               path {
+                  stroke: #2b2b2b;
+                  stroke-width: 1.5px;
+               }
+            }
 
+            &:hover {
                svg {
                   path {
-                     stroke: #2b2b2b;
-                     stroke-width: 1.5px;
+                     stroke: #000000;
                   }
                }
+            }
 
-               &:hover {
-                  svg {
-                     path {
-                        stroke: #000000;
-                     }
-                  }
-               }
-
-               &[data__active] {
-                  svg {
-                     path {
-                        fill: #000;
-                     }
+            &[data__active] {
+               svg {
+                  path {
+                     fill: #000;
                   }
                }
             }

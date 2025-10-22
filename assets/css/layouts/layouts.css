@@ -114,6 +114,7 @@
                .moneyboy-2x-1x-b-layout {
                   width: 100%;
                   max-width: var(--right-aside-width);
+                  min-width: var(--right-aside-width);
                   /* Fixed Aside/Secondary Column (1x) */
                }
 
@@ -140,11 +141,95 @@
 }
 
 .multi-dem-cards-wrapper-layout {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
    gap: 16px;
+   display: grid;
 
-   &[data-layout-toggle-rows] {
-      grid-template-columns: 1fr 1fr;
+   &[ data-direct-cards-layout] {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      &[data-layout-toggle-rows] {
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+
+   &[data-multi-child-grid-layout-wishlist] {
+      .creator-content-type-container-wrapper {
+         grid-template-columns: 1fr 1fr 1fr;
+         gap: 16px;
+         display: grid;
+      }
+
+      &[data-layout-toggle-rows] {
+         .creator-content-type-container-wrapper {
+            grid-template-columns: 1fr;
+            display: grid;
+            gap: 16px;
+
+            .creator-content-card-container {
+               .creator-content-card {
+                  flex-direction: row;
+                  align-items: center;
+                  gap: 12px;
+
+                  .creator-content-card__media {
+                     max-width: 200px;
+                  }
+
+                  .desc-btns {
+                     flex-direction: column;
+                     align-items: center;
+                  }
+
+                  .creator-content-card__stats {
+                     width: 100%;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+/*  */
+.moneyboy-diff-content-wrappers {
+   .desc-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+   }
+
+   .creator-content-filter-grid-container {
+      .search-features-grid-btns {
+         .creator-content-tabs-butn-wrapper {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+
+            button.multi-tab-switch-btn {
+               padding: 4px 6px;
+
+               svg {
+                  width: 20px;
+               }
+
+               span {
+                  font-size: 14px;
+               }
+            }
+         }
+      }
+   }
+
+   .creator-content-card-container {
+      .creator-content-card {
+         .creator-content-card__stats {
+            .creator-content-stat-box {
+               button {
+                  display: flex;
+                  align-items: center;
+               }
+            }
+         }
+      }
    }
 }

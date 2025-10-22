@@ -154,11 +154,11 @@ body {
    }
 
    [data-multi-tabs-content-tab] {
-      display: none;
+      display: none !important;
 
       /* Default hidden state */
       &[data__active] {
-         display: flex;
+         display: grid !important;
          /* Content visible state */
       }
    }

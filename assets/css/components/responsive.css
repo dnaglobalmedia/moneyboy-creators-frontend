@@ -529,24 +529,24 @@
     .multi-tab-section {
         .multi-tabs-layout-container {
             padding: 15px;
+        }
+    }
 
-            .multi-tabs-action-buttons {
-                &>* {}
+    .multi-tabs-action-buttons {
+        &>* {}
 
-                .multi-tab-switch-btn {
-                    &[data__active] {}
+        .multi-tab-switch-btn {
+            &[data__active] {}
 
-                    svg {
-                        path {}
-                    }
-
-                    span {
-                        display: none;
-                    }
-
-                    &:hover {}
-                }
+            svg {
+                path {}
             }
+
+            span {
+                display: none;
+            }
+
+            &:hover {}
         }
     }
 }
@@ -1196,24 +1196,24 @@
     .multi-tab-section {
         .multi-tabs-layout-container {
             padding: 10px;
+        }
+    }
 
-            .multi-tabs-action-buttons {
-                &>* {}
+    .multi-tabs-action-buttons {
+        &>* {}
 
-                .multi-tab-switch-btn {
-                    &[data__active] {}
+        .multi-tab-switch-btn {
+            &[data__active] {}
 
-                    svg {
-                        path {}
-                    }
-
-                    span {
-                        display: none;
-                    }
-
-                    &:hover {}
-                }
+            svg {
+                path {}
             }
+
+            span {
+                display: none;
+            }
+
+            &:hover {}
         }
     }
 

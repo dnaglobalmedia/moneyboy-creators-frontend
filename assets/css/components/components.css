@@ -2017,111 +2017,111 @@
       flex-direction: column;
       padding: 20px;
       gap: 15px;
+   }
+}
 
-      .multi-tabs-action-buttons {
-         display: flex;
-         gap: 5px;
-         align-items: center;
+.multi-tabs-action-buttons {
+   display: flex;
+   gap: 5px;
+   align-items: center;
 
-         &>* {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-         }
+   &>* {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+   }
 
-         .multi-tab-switch-btn {
-            padding: 12px 10px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            transition: var(--transition-fast);
+   .multi-tab-switch-btn {
+      padding: 12px 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: var(--transition-fast);
 
-            &[data__active] {
-               border-color: #020202;
-               box-shadow: 0px 4px 4px 0px #00000012;
-            }
+      &[data__active] {
+         border-color: #020202;
+         box-shadow: 0px 4px 4px 0px #00000012;
+      }
 
-            &:nth-child(1) {
-               &[data__active] {
-                  svg path {
-                     &:nth-child(1) {
-                        fill: black;
-                     }
-
-                     &:nth-child(2) {
-                        fill: #fff;
-                     }
-
-                     &:nth-child(3) {
-                        stroke: #fff;
-                     }
-
-                     &:nth-child(4) {
-                        stroke: #fff;
-                     }
-                  }
+      &.posts-btn {
+         &[data__active] {
+            svg path {
+               &:nth-child(1) {
+                  fill: black;
                }
-            }
 
-            &:nth-child(2) {
-               &[data__active] {
-                  svg path {
-                     &:nth-child(1) {
-                        fill: black;
-                     }
-
-                     &:nth-child(2) {
-                        fill: #000000;
-                     }
-
-                     &:nth-child(3) {
-                        stroke: #fff;
-                        fill: #000000;
-                     }
-                  }
+               &:nth-child(2) {
+                  fill: #fff;
                }
-            }
 
-            &:nth-child(3) {
-               &[data__active] {
-                  svg path {
-                     &:nth-child(1) {
-                        fill: black;
-                     }
-
-                     &:nth-child(2) {
-                        stroke: #fff;
-                        fill: #000000;
-                     }
-
-                     &:nth-child(3) {
-                        stroke: #fff;
-                     }
-                  }
+               &:nth-child(3) {
+                  stroke: #fff;
                }
-            }
 
-            svg {
-               path {
-                  stroke: #020202;
+               &:nth-child(4) {
+                  stroke: #fff;
                }
-            }
-
-            span {
-               font-family: var(--font-family-heading);
-               font-weight: 500;
-               font-size: 20px;
-               line-height: 100%;
-               text-align: center;
-            }
-
-            &:hover {
-               background-color: rgba(210, 210, 210, 0.222);
             }
          }
+      }
+
+      &.videos-btn {
+         &[data__active] {
+            svg path {
+               &:nth-child(1) {
+                  fill: black;
+               }
+
+               &:nth-child(2) {
+                  fill: #000000;
+               }
+
+               &:nth-child(3) {
+                  stroke: #fff;
+                  fill: #000000;
+               }
+            }
+         }
+      }
+
+      &.photos-btn {
+         &[data__active] {
+            svg path {
+               &:nth-child(1) {
+                  fill: black;
+               }
+
+               &:nth-child(2) {
+                  stroke: #fff;
+                  fill: #000000;
+               }
+
+               &:nth-child(3) {
+                  stroke: #fff;
+               }
+            }
+         }
+      }
+
+      svg {
+         path {
+            stroke: #020202;
+         }
+      }
+
+      span {
+         font-family: var(--font-family-heading);
+         font-weight: 500;
+         font-size: 20px;
+         line-height: 100%;
+         text-align: center;
+      }
+
+      &:hover {
+         background-color: rgba(210, 210, 210, 0.222);
       }
    }
 }

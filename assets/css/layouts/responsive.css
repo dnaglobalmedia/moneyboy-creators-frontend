@@ -1,3 +1,45 @@
+@media (max-width:1200px) {
+    .multi-dem-cards-wrapper-layout {
+        &[ data-direct-cards-layout] {
+            &[data-layout-toggle-rows] {}
+        }
+
+        &[data-multi-child-grid-layout-wishlist] {
+            .creator-content-type-container-wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            &[data-layout-toggle-rows] {
+                .creator-content-type-container-wrapper {
+                    .creator-content-card-container {
+                        .creator-content-card {
+                            .creator-content-card__media {}
+
+                            .desc-btns {}
+
+                            .creator-content-card__stats {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .moneyboy-diff-content-wrappers {
+        .creator-content-filter-grid-container {
+            .search-features-grid-btns {
+                .creator-content-tabs-butn-wrapper {
+                    button.multi-tab-switch-btn {
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1280px) and (min-width: 992px) {
     :root {
         /* --sidebar-width: 260px; */
@@ -180,6 +222,32 @@
             }
         }
     }
+
+    .multi-dem-cards-wrapper-layout {
+        &[ data-direct-cards-layout] {
+            &[data-layout-toggle-rows] {}
+        }
+
+        &[data-multi-child-grid-layout-wishlist] {
+            grid-template-columns: 1fr;
+
+            .creator-content-type-container-wrapper {}
+
+            &[data-layout-toggle-rows] {
+                .creator-content-type-container-wrapper {
+                    .creator-content-card-container {
+                        .creator-content-card {
+                            .creator-content-card__media {}
+
+                            .desc-btns {}
+
+                            .creator-content-card__stats {}
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -304,6 +372,41 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .moneyboy-diff-content-wrappers {
+        .creator-content-filter-grid-container {
+            .search-features-grid-btns {
+                flex-wrap: wrap;
+
+                justify-content: end;
+                .creator-content-search-input {
+                    width: 100%;
+                }
+            }
+        }
+        .user-profile-card-wrapper {
+    &.user-profile-card-small {
+        & .user-profile-card-container {
+            .user-profile-content-overlay-container {
+                padding: 6px;
+            }
+        }
+    }
+}
+    }
+
+    .tabs-content-wrapper-layout {
+        padding: 12px;
+    }
+        .multi-dem-cards-wrapper-layout {
+        &[data-multi-child-grid-layout-wishlist] {
+            .creator-content-type-container-wrapper {
+                gap: 10px;
             }
         }
     }

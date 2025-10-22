@@ -106,7 +106,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            top: 48px;
+            top: 41px;            
             backdrop-filter: blur(4px);
         }
 
@@ -390,6 +390,60 @@
 
 /* User Profile Card */
 .user-profile-card-wrapper {
+    &.user-profile-card-small {
+        .user-profile-card-container {
+            border-radius: 22px;
+
+            .user-profile-content-overlay-container {
+                padding: 10px;
+
+                .user-profile-card__action-btns {
+                    .user-profile-card__like-btn {
+                        .like-button {
+                            &:hover {}
+                        }
+                    }
+                }
+
+                .user-profile-card__info-container {
+                    padding: 10px 10px 13px;
+
+                    .user-profile-card__info {
+                        
+                    gap: 0px;
+                        .user-profile-card__name-badge {
+                            .user-profile-card__name {
+                                line-height: 18px;
+                                font-size: 12px;
+                                min-width: max-content;
+                            }
+
+                            .user-profile-card__badge {
+                                width: 27px;
+
+                                img {}
+                            }
+                        }
+
+                        .user-profile-card__username {
+                            font-size: 10px;
+                        }
+                    }
+
+                    .user-profile-card__wishlist-btn {
+                        width: 28px;
+
+                        svg {
+                            width: 16px;
+
+                            path {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .user-profile-card-container {
         position: relative;
         aspect-ratio: 260/ 332;
@@ -557,6 +611,7 @@
 
 .creator-content-card-container {
     width: 100%;
+    overflow: hidden;
 
     .creator-content-card {
         width: 100%;
@@ -620,7 +675,7 @@
                 gap: 5px;
                 align-items: center;
                 border: 1px solid #ffffff4d;
-                padding: 8px 10px;
+                padding:6px 8px ;
                 background: #00000029;
                 backdrop-filter: blur(25px);
                 backdrop-filter: blur(10px);

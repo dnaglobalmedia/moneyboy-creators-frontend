@@ -381,11 +381,17 @@
     .moneyboy-diff-content-wrappers {
         .creator-content-filter-grid-container {
             .search-features-grid-btns {
-                flex-wrap: wrap;
-                justify-content: end;
+                &.has-multi-tabs-btns {
+                    flex-wrap: wrap;
+                    justify-content: end;
+
+                    .creator-content-search-input {
+                        width: 100%;
+                    }
+                }
 
                 .creator-content-search-input {
-                    width: 100%;
+                    width: 50%;
                 }
             }
         }

@@ -159,7 +159,19 @@
          display: grid;
       }
 
+      &[data-2-cols] {
+         .creator-content-type-container-wrapper {
+            grid-template-columns: 1fr 1fr;
+         }
+      }
+
       &[data-layout-toggle-rows] {
+         &[data-2-cols] {
+            .creator-content-type-container-wrapper {
+               grid-template-columns: 1fr;
+            }
+         }
+
          .creator-content-type-container-wrapper {
             grid-template-columns: 1fr;
             display: grid;

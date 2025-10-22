@@ -22,4 +22,12 @@
     .icon-btn {
         width: 22px;
     }
+
+    .filters-card-wrapper {
+        padding: 10px;
+    }
+
+    .filters-card-layout-wrapper {
+        /* padding: 0px; */
+    }
 }

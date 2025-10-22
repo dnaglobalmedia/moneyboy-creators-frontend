@@ -191,6 +191,14 @@
     }
 }
 
-.tabs-content-wrapper-layout {
+.tabs-content-wrapper-layout {}
+
+.filters-card-wrapper {
     padding: 14px;
+    background-color: white;
+}
+
+.filters-card-layout-wrapper {
+    padding: 14px;
+    background-color: white;
 }

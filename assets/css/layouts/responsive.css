@@ -382,28 +382,30 @@
         .creator-content-filter-grid-container {
             .search-features-grid-btns {
                 flex-wrap: wrap;
-
                 justify-content: end;
+
                 .creator-content-search-input {
                     width: 100%;
                 }
             }
         }
+
         .user-profile-card-wrapper {
-    &.user-profile-card-small {
-        & .user-profile-card-container {
-            .user-profile-content-overlay-container {
-                padding: 6px;
+            &.user-profile-card-small {
+                & .user-profile-card-container {
+                    .user-profile-content-overlay-container {
+                        padding: 6px;
+                    }
+                }
             }
         }
     }
-}
-    }
 
     .tabs-content-wrapper-layout {
-        padding: 12px;
+        /* padding: 12px; */
     }
-        .multi-dem-cards-wrapper-layout {
+
+    .multi-dem-cards-wrapper-layout {
         &[data-multi-child-grid-layout-wishlist] {
             .creator-content-type-container-wrapper {
                 gap: 10px;

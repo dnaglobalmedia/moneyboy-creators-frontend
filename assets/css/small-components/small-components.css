@@ -106,7 +106,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            top: 41px;            
+            top: 41px;
             backdrop-filter: blur(4px);
         }
 
@@ -409,8 +409,8 @@
                     padding: 10px 10px 13px;
 
                     .user-profile-card__info {
-                        
-                    gap: 0px;
+                        gap: 0px;
+
                         .user-profile-card__name-badge {
                             .user-profile-card__name {
                                 line-height: 18px;
@@ -675,7 +675,7 @@
                 gap: 5px;
                 align-items: center;
                 border: 1px solid #ffffff4d;
-                padding:6px 8px ;
+                padding: 6px 8px;
                 background: #00000029;
                 backdrop-filter: blur(25px);
                 backdrop-filter: blur(10px);
@@ -835,6 +835,115 @@
                 width: 100%;
                 max-width: 323px;
             }
+        }
+    }
+}
+
+.creator-media-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 26px;
+    width: 100%;
+    gap: 10px;
+
+    .creator-media-card__media-wrapper {
+        width: 100%;
+        position: relative;
+
+        .creator-media-card__media {
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            border-radius: 26px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .creator-media-card__overlay {
+            position: absolute;
+            inset: 12px;
+
+            .creator-media-card__stats {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .creator-media-card__stats-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #ffffff4d;
+                    background: #00000029;
+                    backdrop-filter: blur(25px);
+                    gap: 5px;
+                    padding: 3px 6px;
+                    border-radius: 12px;
+                    cursor: pointer;
+
+                    &.video-icon {
+                        aspect-ratio: 1/1;
+                        width: 36px;
+                        border-radius: 20px;
+                    }
+
+                    &.wishlist-icon {
+                        &:hover {
+                            svg {
+                                path {
+                                    &:nth-child(1) {
+                                        stroke: #6C5CE7;
+                                        fill: #6C5CE7;
+                                        position: relative;
+                                        z-index: 2;
+                                    }
+
+                                    &:nth-child(2) {
+                                        stroke: #6C5CE7;
+                                        fill: #6C5CE7;
+                                    }
+
+                                    &:nth-child(3) {
+                                        stroke: #ffffff;
+                                        fill: #ffffff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    svg {
+                        width: 20px;
+                        transition: var(--transition-fast);
+
+                        path {
+                            transition: var(--transition-fast);
+                            stroke: white;
+                        }
+                    }
+
+                    span {
+                        color: white;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .creator-media-card__desc {
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #00000099;
         }
     }
 }

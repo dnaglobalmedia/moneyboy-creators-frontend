@@ -24,7 +24,8 @@
     }
 
     .filters-card-wrapper {
-        padding: 10px;
+        padding: 8px;
+        border-radius: 16px;
     }
 
     .filters-card-layout-wrapper {

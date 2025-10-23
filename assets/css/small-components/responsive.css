@@ -1,179 +1,236 @@
- @media (max-width: 620px) {
-     .user-profile-card-wrapper {
-         .user-profile-card-container {
-             border-radius: 20px;
+@media (max-width: 620px) {
+    .user-profile-card-wrapper {
+        .user-profile-card-container {
+            border-radius: 20px;
 
-             &:hover {}
+            &:hover {}
 
-             .user-profile-card__img {
-                 img {}
-             }
+            .user-profile-card__img {
+                img {}
+            }
 
-             .user-profile-content-overlay-container {
-                 padding: 6px;
+            .user-profile-content-overlay-container {
+                padding: 6px;
 
-                 .user-profile-card__action-btns {
-                     .user-profile-card__like-btn {
-                         width: 30px;
+                .user-profile-card__action-btns {
+                    .user-profile-card__like-btn {
+                        width: 30px;
 
-                         &:hover {
-                             svg {}
-                         }
+                        &:hover {
+                            svg {}
+                        }
 
-                         svg {
-                             width: 15px;
+                        svg {
+                            width: 15px;
 
-                             path {}
-                         }
-                     }
-                 }
+                            path {}
+                        }
+                    }
+                }
 
-                 .user-profile-card__info-container {
-                     padding: 8px;
-                     position: relative;
+                .user-profile-card__info-container {
+                    padding: 8px;
+                    position: relative;
 
-                     .user-profile-card__info {
-                         .user-profile-card__name-badge {
-                             .user-profile-card__name {
-                                 font-size: 12px;
-                                 line-height: 100%;
-                                 min-width: max-content;
-                             }
+                    .user-profile-card__info {
+                        .user-profile-card__name-badge {
+                            .user-profile-card__name {
+                                font-size: 12px;
+                                line-height: 100%;
+                                min-width: max-content;
+                            }
 
-                             .user-profile-card__badge {
-                                 width: 17px;
+                            .user-profile-card__badge {
+                                width: 17px;
 
-                                 img {}
-                             }
-                         }
+                                img {}
+                            }
+                        }
 
-                         .user-profile-card__username {
-                             font-size: 10px;
-                         }
-                     }
+                        .user-profile-card__username {
+                            font-size: 10px;
+                        }
+                    }
 
-                     .user-profile-card__wishlist-btn {
-                         width: 30px;
-                         min-width: 30px;
-                         position: absolute;
-                         right: 8px;
+                    .user-profile-card__wishlist-btn {
+                        width: 30px;
+                        min-width: 30px;
+                        position: absolute;
+                        right: 8px;
 
-                         &:hover {
-                             svg {}
-                         }
+                        &:hover {
+                            svg {}
+                        }
 
-                         svg {
-                             width: 15px;
+                        svg {
+                            width: 15px;
 
-                             path {}
-                         }
-                     }
-                 }
-             }
-         }
-     }
+                            path {}
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-     /* Profile Card */
-     .profile-card {
-         &.featured-profile-card {
-             .profile-card__main {
-                 .profile-card__avatar-settings {
-                     .profile-card__avatar {
-                         &::before {}
+    /* Profile Card */
+    .profile-card {
+        &.featured-profile-card {
+            .profile-card__main {
+                .profile-card__avatar-settings {
+                    .profile-card__avatar {
+                        &::before {}
 
-                         img {}
-                     }
-                 }
+                        img {}
+                    }
+                }
 
-                 .profile-card__info {
-                     .profile-card__name-badge {
-                         .profile-card__name {}
+                .profile-card__info {
+                    .profile-card__name-badge {
+                        .profile-card__name {}
 
-                         .profile-card__badge {
-                             img {}
-                         }
-                     }
+                        .profile-card__badge {
+                            img {}
+                        }
+                    }
 
-                     .profile-card__username {
-                         &:hover {}
-                     }
-                 }
-             }
+                    .profile-card__username {
+                        &:hover {}
+                    }
+                }
+            }
 
-             &:hover {
-                 .profile-card__main {
-                     .profile-card__icon {
-                         .profile-card__blur-icon {}
-                     }
-                 }
-             }
-         }
-     }
- }
+            &:hover {
+                .profile-card__main {
+                    .profile-card__icon {
+                        .profile-card__blur-icon {}
+                    }
+                }
+            }
+        }
+    }
 
- @media (max-width: 560px) {
-     .creator-content-card-container {
-         .creator-content-card {
-             border-radius: 20px;
+    .creator-media-card {
+        border-radius: 20px;
 
-             &:hover {
-                 .creator-content-card__media {
-                     .creator-card__img {
-                         img {}
-                     }
+        .creator-media-card__media-wrapper {
+            border-radius: 20px;
 
-                     .content-locked-label {}
-                 }
-             }
+            .creator-media-card__media {
+                border-radius: 16px;
 
-             .creator-content-card__media {
-                 .creator-card__img {
-                     img {}
-                 }
+                img {}
+            }
 
-                 .content-locked-label {
-                     padding: 4px 8px;
-                     gap: 5px;
-                     border-radius: 12px;
+            .creator-media-card__overlay {
+                inset: 8px;
 
-                     svg {
-                         width: 20px;
+                .creator-media-card__stats {
+                    .creator-media-card__stats-btn {
+                        gap: 3px;
 
-                         path {}
-                     }
+                        &.video-icon {
+                            width: 30px;
+                            aspect-ratio: 1/1;
+                            padding: 0;
+                        }
 
-                     span {
-                         font-size: 10px;
-                     }
-                 }
-             }
+                        &.wishlist-icon {
+                            padding: 0 4px;
+                            border-radius: 10px;
 
-             .creator-content-card__description {
-                 p {
-                     font-size: 12px;
-                     line-height: 20px;
-                 }
-             }
+                            svg {
+                                width: 14px;
+                            }
+                        }
 
-             .creator-content-card__stats {
-                 gap: 5px;
+                        svg {
+                            width: 16px;
 
-                 .creator-content-stat-box {
-                     gap: 4px;
-                     border-radius: 12px;
-                     padding: 3px 6px;
+                            path {}
+                        }
 
-                     svg {
-                         width: 20px;
+                        span {
+                            font-size: 10px;
+                            line-height: 10px;
+                        }
+                    }
+                }
+            }
+        }
 
-                         path {}
-                     }
+        .creator-media-card__desc {
+            p {
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    }
+}
 
-                     span {
-                         font-size: 14px;
-                     }
-                 }
-             }
-         }
-     }
- }
+@media (max-width: 560px) {
+    .creator-content-card-container {
+        .creator-content-card {
+            border-radius: 20px;
+
+            &:hover {
+                .creator-content-card__media {
+                    .creator-card__img {
+                        img {}
+                    }
+
+                    .content-locked-label {}
+                }
+            }
+
+            .creator-content-card__media {
+                .creator-card__img {
+                    img {}
+                }
+
+                .content-locked-label {
+                    padding: 4px 8px;
+                    gap: 5px;
+                    border-radius: 12px;
+
+                    svg {
+                        width: 20px;
+
+                        path {}
+                    }
+
+                    span {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .creator-content-card__description {
+                p {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+
+            .creator-content-card__stats {
+                gap: 5px;
+
+                .creator-content-stat-box {
+                    gap: 4px;
+                    border-radius: 12px;
+                    padding: 3px 6px;
+
+                    svg {
+                        width: 20px;
+
+                        path {}
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

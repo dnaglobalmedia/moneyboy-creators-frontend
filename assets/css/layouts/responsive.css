@@ -381,6 +381,9 @@
     .moneyboy-diff-content-wrappers {
         .creator-content-filter-grid-container {
             .search-features-grid-btns {
+                border-radius: 16px;
+                padding: 8px;
+
                 &.has-multi-tabs-btns {
                     flex-wrap: wrap;
                     justify-content: end;
@@ -392,6 +395,18 @@
 
                 .creator-content-search-input {
                     width: 50%;
+                }
+
+                .creater-content-filters-layouts {
+                    gap: 12px;
+
+                    .creator-content-grid-layout-options {
+                        gap: 12px;
+
+                        .creator-content-grid-layout-btn {
+                            width: 20px;
+                        }
+                    }
                 }
             }
         }

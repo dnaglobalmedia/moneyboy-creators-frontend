@@ -19,7 +19,7 @@
    .header-main {
       /* Sticky Header: Ensures the main navigation/header remains visible */
       position: sticky;
-      z-index: 5;
+      z-index: 10;
       /* High z-index to overlay scrolling content */
       top: 0;
       height: var(--header-height);

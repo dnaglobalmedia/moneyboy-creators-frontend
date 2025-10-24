@@ -947,3 +947,232 @@
         }
     }
 }
+
+/* ------------------ */
+.rel-users-wrapper {
+    .rel-user-box {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .rel-user-profile-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .rel-user-profile {
+                .profile-card {
+                    padding: 0;
+
+                    .profile-card__main {
+                        .profile-card__avatar-settings {
+                            .profile-card__avatar {
+                                width: 54px;
+
+                                &::before {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    inset: 0;
+                                    border-radius: inherit;
+                                    border: 2px solid #FFFFFF7A;
+                                }
+
+                                img {}
+                            }
+                        }
+
+                        .profile-card__info {
+                            gap: 5px;
+
+                            .profile-card__name-badge {
+                                .profile-card__name {}
+
+                                .profile-card__badge {
+                                    img {}
+                                }
+                            }
+
+                            .profile-card__username {}
+                        }
+                    }
+                }
+            }
+
+            .rel-user-actions {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .rel-user-action-btn {
+                    .btn-txt-gradient {
+                        padding: 10px 14px 10px;
+
+                        span {
+                            font-weight: 400;
+                            font-size: 12px;
+                            letter-spacing: 0;
+                            line-height: 12px;
+                        }
+                    }
+                }
+
+                .rel-user-more-opts-wrapper {
+                    position: relative;
+
+                    .rel-user-more-opts-trigger-icon {
+                        display: flex;
+                        cursor: pointer;
+                        transition: var(--transition-fast);
+
+                        &:hover {
+                            svg {
+                                path {
+                                    fill: #000;
+                                }
+                            }
+                        }
+
+                        &:active {
+                            transform: scale(.9);
+                        }
+
+                        svg {
+                            path {
+                                transition: var(--transition-fast);
+                                stroke: #000;
+                            }
+                        }
+                    }
+
+                    .rel-users-more-opts-popup-wrapper {
+                        position: absolute;
+                        min-width: 250px;
+                        z-index: 3;
+                        right: 100%;
+                        display: flex;
+                        min-height: max-content;
+                        display: none;
+
+                        .rel-users-more-opts-popup-container {
+                            width: 100%;
+                            padding: 20px;
+                            background-color: white;
+                            border-radius: 24px;
+                            box-shadow: 0px 6px 12px -4px #0808081F, 0px 2px 13.5px 1px #08080803;
+                            display: flex;
+
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+
+                                li {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 12px;
+                                    cursor: pointer;
+
+                                    .icon {
+                                        display: flex;
+                                        width: 24px;
+                                        aspect-ratio: 1/1;
+                                        min-width: 24px;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        svg {
+                                            width: 24px;
+                                            transition: var(--transition-fast);
+                                            aspect-ratio: 1/1;
+
+                                            path {
+                                                transition: var(--transition-fast);
+                                                stroke: #000;
+                                            }
+                                        }
+                                    }
+
+                                    span {
+                                        color: #444444;
+                                        font-family: var(--font-family-secondary);
+                                        font-weight: 500;
+                                        font-size: 16px;
+                                        transition: var(--transition-fast);
+                                    }
+
+                                    &:hover {
+                                        .icon {
+                                            svg {
+                                                path {}
+                                            }
+
+                                            &.share-icon {
+                                                svg path {
+                                                    &:nth-child(1) {
+                                                        fill: rgb(0, 0, 0);
+                                                    }
+                                                }
+                                            }
+
+                                            &.mute-icon {
+                                                svg path {
+
+                                                    &:nth-child(1),
+                                                    &:nth-child(2) {
+                                                        fill: rgb(0, 0, 0);
+                                                    }
+                                                }
+                                            }
+
+                                            &.remove-icon {
+                                                svg path {
+
+                                                    &:nth-child(1),
+                                                    &:nth-child(2) {
+                                                        fill: rgb(0, 0, 0);
+                                                    }
+                                                }
+                                            }
+
+                                            &.block-icon {
+                                                svg path {
+
+                                                    &:nth-child(1),
+                                                    &:nth-child(2) {
+                                                        fill: rgb(0, 0, 0);
+                                                    }
+                                                }
+                                            }
+
+                                            &.report-icon {
+                                                svg path {
+                                                    fill: #000000;
+                                                }
+                                            }
+                                        }
+
+                                        span {
+                                            color: #000;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .rel-user-desc {
+            padding-left: 66px;
+
+            p {
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 18px;
+                color: #505050;
+            }
+        }
+    }
+}

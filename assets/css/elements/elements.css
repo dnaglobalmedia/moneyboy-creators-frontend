@@ -176,6 +176,14 @@
         }
     }
 
+    &.btn-grey {
+        background:  #E4E4E4;
+        span {
+            color: #000000;
+        }
+
+    }
+
     /* Gradient text rendering */
     span {
         font-family: var(--font-family-heading);

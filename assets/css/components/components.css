@@ -874,7 +874,9 @@
 }
 
 .moneyboy-feed-sidebar-container {
-   display: inline;
+   display: flex;
+   flex-direction: column;
+   gap:var(--spacing-md);
 
    .featured-profiles-card-container {
       padding: 16px;
@@ -891,10 +893,6 @@
          justify-content: center;
          gap: 12px;
       }
-   }
-
-   .moneyboy-network-grow-card-wrapper {
-      margin-top: var(--spacing-md);
    }
 }
 
@@ -933,18 +931,22 @@
          cursor: pointer;
          border-radius: 12px;
          justify-content: center;
-transition:var(--transition-fast);
-svg {
-            transition:var(--transition-fast);
+         transition: var(--transition-fast);
+
+         svg {
+            transition: var(--transition-fast);
             width: 18px;
+
             path {
                stroke: #292D32;
             }
          }
-          &:hover {
+
+         &:hover {
             background-color: #010405;
+
             svg path {
-               stroke:  #FECE26;
+               stroke: #FECE26;
             }
          }
       }

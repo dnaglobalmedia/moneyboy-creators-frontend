@@ -257,6 +257,10 @@
         &[data-layout-toggle-rows] {
             grid-template-columns: 1fr;
         }
+
+        &[data-temporary-pause] {
+            grid-template-columns: 1fr;
+        }
     }
 }
 

@@ -30,3 +30,6 @@ import "./components/menu-toggle.js";
 
 // Grid Cols Toggle Functionality
 import "./components/grid-cols-layout-toggle.js";
+
+// Swiper Functionality
+import "./components/swipers.js";

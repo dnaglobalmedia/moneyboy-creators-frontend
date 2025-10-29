@@ -96,10 +96,14 @@
       .moneyboy-page-content-container {
          padding-block: var(--spacing-md);
          width: 100%;
+         min-width: 0px;
+         display: flex;
+         max-width: 100%;
 
          /* Dynamic Content Wrapper */
          .moneyboy-dynamic-content-layout {
             width: 100%;
+            max-width: 100%;
 
             /* 2-Column Responsive Grid (2x / 1x pattern) */
             .moneyboy-2x-1x-layout-container {
@@ -108,7 +112,9 @@
 
                .moneyboy-2x-1x-a-layout {
                   width: 100%;
+                  min-width: 0px;
                   /* Flexible Main Content Column (2x) */
+                  max-width: 100%;
                }
 
                .moneyboy-2x-1x-b-layout {

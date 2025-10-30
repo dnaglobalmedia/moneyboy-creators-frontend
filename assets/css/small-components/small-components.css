@@ -1519,9 +1519,9 @@
     max-width: 100%;
     overflow: hidden;
     display: flex;
-    
+
     .moneyboy-swiper-cards-wrapper {
-        display:grid;
+        display: grid;
         width: 100%;
         max-width: 100%;
 
@@ -1530,11 +1530,183 @@
             width: 100%;
             height: 100%;
             min-width: 0;
-            max-width: 100%; 
+            max-width: 100%;
             background-color: red;
 
             h1 {
                 height: 100px;
+            }
+        }
+    }
+}
+
+.moneyboy-feed-page-container {
+    .store-page-header-wrapper.store-page-header-wrapper {
+        /* padding: 0; */
+        overflow: hidden;
+
+        .store-page-header {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+
+            .store-page-header-bg-img {
+                position: absolute;
+                inset: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: inherit;
+
+                &::before {
+                    background-color: #000000;
+                    content: '';
+                    inset: 0;
+                    position: absolute;
+                    opacity: .7;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+
+            .cate-back-btn {
+                position: relative;
+                z-index: 2;
+
+                &:hover {
+                    background: linear-gradient(93.25deg, #E5741F -49.57%, #FECE26 98.1%);
+
+                    svg {
+                        path {
+                            stroke: white;
+                        }
+                    }
+                }
+            }
+
+            .store-page-header-content-wrapper {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                /* salman */
+                .store-page-header--profile {
+                    .profile-card {
+                        padding: 0;
+
+                        .profile-card__main {
+                            .profile-card__avatar-settings {
+                                .profile-card__avatar {
+                                    border-radius: 17px;
+                                    width: 60px;
+
+                                    &::before {
+                                        content: '';
+                                        display: block;
+                                        position: absolute;
+                                        inset: 0;
+                                        border-radius: inherit;
+                                        border: 2px solid #FFFFFF78;
+                                    }
+                                }
+                            }
+
+                            .profile-card__info {
+                                gap: 5px;
+
+                                .profile-card__name-badge {
+                                    gap: 5px;
+
+                                    .profile-card__name {
+                                        font-size: 22px;
+                                        color: white;
+                                    }
+
+                                    .profile-card__badge {
+                                        img {
+                                            width: 30px;
+                                        }
+                                    }
+                                }
+
+                                .profile-card__username {
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    color: white;
+
+                                    &:hover {
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    /* Salman */
+                }
+
+                .store-page-header-tag {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding-right: 80px;
+
+                    img {
+                        max-width: 40px;
+                    }
+
+                    span {
+                        background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
+                        background-clip: text;
+                        color: transparent;
+                        transition: var(--transition-fast);
+                        font-family: var(--font-family-heading);
+                        font-weight: 500;
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Danish */
+.featured-content-premium-card {
+    min-height: 323px;
+
+    .featured-content-premium-card-container {
+        position: relative;
+
+        .featured-content-bg-img {
+            position: absolute;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .featured-premium-card-content-container {
+            .featured-premium-card-content {
+                .featured-premium-card-icons {
+                    .featured-premium-card-icon {
+                        svg {}
+                    }
+                }
+
+                h5 {}
+
+                p {}
+
+                .btn-txt-gradient {}
             }
         }
     }

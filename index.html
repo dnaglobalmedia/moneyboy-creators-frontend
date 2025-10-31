@@ -36,6 +36,14 @@
       min-width: 800px;
     }
 
+    .main-2-containers {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 700px;
+    }
+
     .container {
       max-width: 700px;
       /* Increased max-width for the two-column layout */
@@ -309,71 +317,117 @@
 
 <body>
   <div class="containers-wrapper">
-    <div class="container">
-      <h1>All Page Links (For Development Only)</h1>
+    <div class="main-2-containers">
+      <div class="container">
+        <h1>All Page Links (Milestones Accordingly)</h1>
 
-      <div class="milestone-section">
-        <h2>Milestone 01</h2>
-        <div class="page-links-group">
-          <div class="column">
-            <h3>User Pages</h3>
+        <div class="milestone-section">
+          <h2>Milestone 01</h2>
+          <div class="page-links-group">
+            <div class="column">
+              <h3>User Pages</h3>
+            </div>
+            <div class="column">
+              <h3>Creator Pages</h3>
+              <a href="feed-page-[CREATOR].html" class="page-btn">
+                Feed Page - CREATOR
+              </a>
+            </div>
           </div>
-          <div class="column">
-            <h3>Creator Pages</h3>
-            <a href="feed-page-[CREATOR].html" class="page-btn">
-              Feed Page - CREATOR
-            </a>
+        </div>
+
+        <div class="milestone-section">
+          <h2>Milestone 02</h2>
+          <div class="page-links-group">
+            <div class="column">
+              <h3>User Pages</h3>
+              <a href="profile-page-[USER].html" class="page-btn">
+                Profile Page - USER
+              </a>
+            </div>
+            <div class="column">
+              <h3>Creator Pages</h3>
+              <a href="profile-page-[CREATOR].html" class="page-btn">
+                Profile Page - CREATOR
+              </a>
+              <a href="discover-page-[CREATOR].html" class="page-btn">
+                Discover Page - CREATOR
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="milestone-section">
+          <h2>Milestone 03 <span>(Active)</span></h2>
+          <div class="page-links-group">
+            <div class="column">
+              <h3>User Pages</h3>
+              <a href="feed-page-[USER].html" class="page-btn">
+                Feed Page - USER
+              </a>
+            </div>
+            <div class="column">
+              <h3>Creator Pages</h3>
+              <a href="wishlist-page-[CREATOR].html" class="page-btn">
+                Wishlist Page - CREATOR
+              </a>
+              <a href="likes-page-[CREATOR].html" class="page-btn">
+                Likes Page - CREATOR
+              </a>
+              <a href="followers-following-page-[CREATOR].html" class="page-btn">
+                Followers Page - CREATOR
+              </a>
+              <a href="purchased-media-[CREATOR].html" class="page-btn">
+                Purchased Media Page - CREATOR
+              </a>
+              <a href="store-page-[CREATOR].html" class="page-btn">
+                Store Page - CREATOR
+              </a>
+            </div>
           </div>
         </div>
       </div>
+      <div class="container">
+        <h1>All Page Links (User Based)</h1>
 
-      <div class="milestone-section">
-        <h2>Milestone 02</h2>
-        <div class="page-links-group">
-          <div class="column">
-            <h3>User Pages</h3>
-            <a href="profile-page-[USER].html" class="page-btn">
-              Profile Page - USER
-            </a>
-          </div>
-          <div class="column">
-            <h3>Creator Pages</h3>
-            <a href="profile-page-[CREATOR].html" class="page-btn">
-              Profile Page - CREATOR
-            </a>
-            <a href="discover-page-[CREATOR].html" class="page-btn">
-              Discover Page - CREATOR
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="milestone-section">
-        <h2>Milestone 03 <span>(Active)</span></h2>
-        <div class="page-links-group">
-          <div class="column">
-            <h3>User Pages</h3>
-            <a href="feed-page-[USER].html" class="page-btn">
-              Feed Page - USER
-            </a>
-          </div>
-          <div class="column">
-            <h3>Creator Pages</h3>
-            <a href="wishlist-page-[CREATOR].html" class="page-btn">
-              Wishlist Page - CREATOR
-            </a>
-            <a href="likes-page-[CREATOR].html" class="page-btn">
-              Likes Page - CREATOR
-            </a>
-            <a href="followers-following-page-[CREATOR].html" class="page-btn">
-              Followers Page - CREATOR
-            </a>
-            <a href="purchased-media-[CREATOR].html" class="page-btn">
-              Purchased Media Page - CREATOR
-            </a>
-            <a href="store-page-[CREATOR].html" class="page-btn">
-              Store Page - CREATOR
-            </a>
+        <div class="milestone-section">
+          <div class="page-links-group">
+            <div class="column">
+              <h3>User Pages</h3>
+              <a href="profile-page-[USER].html" class="page-btn">
+                Profile Page - USER
+              </a>
+              <a href="feed-page-[USER].html" class="page-btn">
+                Feed Page - USER
+              </a>
+            </div>
+            <div class="column">
+              <h3>Creator Pages</h3>
+              <a href="feed-page-[CREATOR].html" class="page-btn">
+                Feed Page - CREATOR
+              </a>
+              <a href="profile-page-[CREATOR].html" class="page-btn">
+                Profile Page - CREATOR
+              </a>
+              <a href="discover-page-[CREATOR].html" class="page-btn">
+                Discover Page - CREATOR
+              </a>
+              <a href="wishlist-page-[CREATOR].html" class="page-btn">
+                Wishlist Page - CREATOR
+              </a>
+              <a href="likes-page-[CREATOR].html" class="page-btn">
+                Likes Page - CREATOR
+              </a>
+              <a href="followers-following-page-[CREATOR].html" class="page-btn">
+                Followers Page - CREATOR
+              </a>
+              <a href="purchased-media-[CREATOR].html" class="page-btn">
+                Purchased Media Page - CREATOR
+              </a>
+              <a href="store-page-[CREATOR].html" class="page-btn">
+                Store Page - CREATOR
+              </a>
+            </div>
           </div>
         </div>
       </div>

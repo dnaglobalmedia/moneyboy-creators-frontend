@@ -1,3 +1,186 @@
+@media (max-width: 992px) {
+    .moneyboy-feed-page-container {
+        .store-page-header-wrapper.store-page-header-wrapper {
+            .store-page-header {
+                .store-page-header-bg-img {
+                    &::before {}
+
+                    img {}
+                }
+
+                .cate-back-btn {
+                    &:hover {
+                        svg {
+                            path {}
+                        }
+                    }
+                }
+
+                .store-page-header-content-wrapper {
+                    .store-page-header--profile {
+                        .profile-card {
+                            .profile-card__main {
+                                .profile-card__avatar-settings {
+                                    .profile-card__avatar {
+                                        border-radius: 14px;
+                                        width: 50px;
+
+                                        &::before {}
+                                    }
+                                }
+
+                                .profile-card__info {
+                                    gap: 3px;
+
+                                    .profile-card__name-badge {
+                                        .profile-card__name {
+                                            font-size: 19px;
+                                        }
+
+                                        .profile-card__badge {
+                                            img {
+                                                width: 25px;
+                                            }
+                                        }
+                                    }
+
+                                    .profile-card__username {
+                                        font-size: 14px;
+
+                                        &:hover {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .store-page-header-tag {
+                        padding-right: 50px;
+
+                        img {
+                            max-width: 34px;
+                        }
+
+                        span {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .moneyboy-special-content-banner-wrapper {
+        .moneyboy-special-content-banner-container {
+            padding: 14px;
+            border-radius: 24px;
+            flex-direction: column;
+            display: flex;
+            gap: 12px;
+
+            .moneyboy-special-content-banner--content {
+                h2 {
+                    font-size: 30px;
+                }
+
+                p {}
+
+                a {
+                    svg {}
+
+                    span {}
+                }
+            }
+
+            .moneyboy-special-content-banner--img-wrapper {
+                img {}
+
+                .text-overlay {
+                    p {}
+                }
+            }
+        }
+    }
+
+    .featured-content-premium-card {
+        .featured-content-premium-card-container {
+            .featured-content-bg-img {
+                img {}
+            }
+
+            .featured-premium-card-content-container {
+                .featured-premium-card-content {
+                    .featured-premium-card-icons {
+                        .featured-premium-card-icon {
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+
+                            &:nth-child(2) {}
+                        }
+                    }
+
+                    h5 {}
+
+                    p {
+                        font-size: 14px;
+                        letter-spacing: 0.25px;
+                    }
+
+                    .btn-txt-gradient {
+                        svg {}
+
+                        span {}
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-type-card-wrapper {
+        .hero-type-card-container {
+            .hero-type-card--bg-img {
+                &::before {}
+
+                img {}
+            }
+
+            .hero-type-card--content-container {
+                padding: 18px;
+
+                h2 {
+                    font-size: 34px;
+                }
+
+                h4 {
+                    font-size: 19px;
+                }
+
+                .hero-type-card--cta-box {
+                    p {}
+
+                    div {
+                        min-width: unset;
+
+                        .btn-txt-gradient {
+                            padding: 14px 20px;
+                            min-width: max-content;
+
+                            span {}
+                        }
+                    }
+                }
+
+                .hero-type-card--desc {
+                    p {}
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 620px) {
     .user-profile-card-wrapper {
         .user-profile-card-container {
@@ -393,6 +576,205 @@
 
                     span {
                         font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*  */
+    .moneyboy-feed-page-container {
+        .store-page-header-wrapper.store-page-header-wrapper {
+            .store-page-header {
+                gap: 6px;
+
+                .store-page-header-bg-img {
+                    &::before {}
+
+                    img {}
+                }
+
+                .cate-back-btn {
+                    &:hover {
+                        svg {
+                            path {}
+                        }
+                    }
+                }
+
+                .store-page-header-content-wrapper {
+                    .store-page-header--profile {
+                        .profile-card {
+                            .profile-card__main {
+                                gap: 5px;
+
+                                .profile-card__avatar-settings {
+                                    .profile-card__avatar {
+                                        &::before {}
+                                    }
+                                }
+
+                                .profile-card__info {
+                                    gap: 3px;
+
+                                    .profile-card__name-badge {
+                                        .profile-card__name {
+                                            font-size: 16px;
+                                        }
+
+                                        .profile-card__badge {
+                                            margin-left: -3px;
+
+                                            img {
+                                                position: absolute;
+                                            }
+                                        }
+                                    }
+
+                                    .profile-card__username {
+                                        font-size: 12px;
+
+                                        &:hover {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .store-page-header-tag {
+                        padding-right: 6px;
+
+                        img {
+                            max-width: 30px;
+                        }
+
+                        span {
+                            font-size: 20px
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-type-card-wrapper {
+        .hero-type-card-container {
+            border-radius: 20px;
+
+            .hero-type-card--bg-img {
+                &::before {}
+
+                img {}
+            }
+
+            .hero-type-card--content-container {
+                padding: 10px;
+
+                h2 {
+                    font-size: 32px;
+                }
+
+                h4 {
+                    font-size: 16px;
+                }
+
+                .hero-type-card--cta-box {
+                    padding: 10px;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    p {
+                        width: 100%;
+                        max-width: 100%;
+                        font-size: 14px;
+                    }
+
+                    div {
+                        min-width: unset;
+                        width: 100%;
+
+                        .btn-txt-gradient {
+                            max-width: 100%;
+                            width: 100%;
+
+                            span {}
+                        }
+                    }
+                }
+
+                .hero-type-card--desc {
+                    p {
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*  */
+    .featured-content-premium-card {
+        .featured-content-premium-card-container {
+            .featured-content-bg-img {
+                img {}
+            }
+
+            .featured-premium-card-content-container {
+                .featured-premium-card-content {
+                    max-width: 100%;
+
+                    .featured-premium-card-icons {
+                        .featured-premium-card-icon {
+                            svg {
+                                path {}
+                            }
+
+                            span {}
+
+                            &:nth-child(2) {}
+                        }
+                    }
+
+                    h5 {}
+
+                    p {}
+
+                    .btn-txt-gradient {
+                        svg {}
+
+                        span {}
+                    }
+                }
+            }
+        }
+    }
+
+    .moneyboy-special-content-banner-wrapper {
+        .moneyboy-special-content-banner-container {
+            .moneyboy-special-content-banner--content {
+                h2 {}
+
+                p {
+                    font-size: 13px;
+                }
+
+                a {
+                    max-width: 100%;
+                    width: 100%;
+
+                    svg {}
+
+                    span {}
+                }
+            }
+
+            .moneyboy-special-content-banner--img-wrapper {
+                img {}
+
+                .text-overlay {
+                    border-radius: 16px;
+
+                    p {
+                        font-size: 12px;
                     }
                 }
             }

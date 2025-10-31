@@ -1545,9 +1545,7 @@
             justify-content: space-between;
             align-items: center;
 
-            h3 {
-                
-            }
+            h3 {}
 
             .moneyboy-swiper-controls {
                 display: flex;
@@ -1671,7 +1669,6 @@
                 width: 100%;
                 justify-content: space-between;
 
-                  
                 .store-page-header--profile {
                     .profile-card {
                         padding: 0;
@@ -1723,8 +1720,6 @@
                             }
                         }
                     }
-
-                      
                 }
 
                 .store-page-header-tag {
@@ -1955,6 +1950,8 @@
                 border-radius: 24px;
                 overflow: hidden;
                 bottom: 20px;
+                max-width: 80%;
+                text-align: center;
 
                 p {
                     color: white;

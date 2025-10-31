@@ -28,7 +28,7 @@
     .moneyboy-diff-content-wrappers {
         .creator-content-filter-grid-container {
             .search-features-grid-btns {
-                .creator-content-tabs-butn-wrapper {
+                .creator-content-tabs-btn-wrapper {
                     button.multi-tab-switch-btn {
                         span {
                             display: none;
@@ -254,6 +254,14 @@
     .multi-dem-cards-wrapper-layout {
         grid-template-columns: 1fr 1fr;
 
+        &:has(.col-4-cards-layout) {
+            grid-template-columns: 1fr;
+
+            .col-4-cards-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
         &[data-layout-toggle-rows] {
             grid-template-columns: 1fr;
         }
@@ -442,5 +450,21 @@
 @media (max-width: 560px) {
     .multi-dem-cards-wrapper-layout {
         gap: 12px;
+    }
+
+    .multi-dem-cards-wrapper-layout {
+        &[data-layout-toggle-rows] {
+            .col-4-cards-layout {
+                .creator-media-card {
+                    .creator-media-card__media-wrapper {
+                        max-width: 150px;
+                    }
+
+                    .creator-media-card__desc {}
+
+                    .creator-media-card__btn {}
+                }
+            }
+        }
     }
 }

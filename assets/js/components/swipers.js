@@ -87,7 +87,7 @@
                         slidesPerGroup: 1,
                     },
                     // Desktop/Tablet (768px and up)
-                    768: {
+                    620: {
                         slidesPerView: 2, 
                         slidesPerGroup: 1,
                     }

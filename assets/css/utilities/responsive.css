@@ -32,3 +32,9 @@
         /* padding: 0px; */
     }
 }
+
+@media (max-width: 560px) {
+    .col-4-cards-layout {
+        gap: 10px;
+    }
+}

@@ -69,7 +69,7 @@
             const swiperOptions = {
                 // Core Settings
                 loop: false,
-                spaceBetween: 20,
+                spaceBetween: 16,
                 
                 // Essential Layout Fixes
                 observer: true,       

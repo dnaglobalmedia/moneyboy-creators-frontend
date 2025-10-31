@@ -1015,6 +1015,23 @@
             color: #00000099;
         }
     }
+
+    .creator-media-card__btn {
+        a {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            border-radius: 12px;
+            padding: 14px 0;
+
+            svg {
+                position: relative;
+                top: -1px;
+            }
+        }
+    }
 }
 
 /* ------------------ */
@@ -1420,7 +1437,6 @@
 
     .hero-type-card-container {
         width: 100%;
-        min-height: 260px;
         overflow: hidden;
         position: relative;
         border-radius: 24px;
@@ -1517,24 +1533,82 @@
 
 .moneyboy-swiper-wrapper {
     max-width: 100%;
-    overflow: hidden;
     display: flex;
 
-    .moneyboy-swiper-cards-wrapper {
-        display: grid;
-        width: 100%;
-        max-width: 100%;
+    .moneyboy-swiper-container {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
 
-        .swiper {
+        .moneyboy-swiper-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                
+            }
+
+            .moneyboy-swiper-controls {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .moneyboy-swiper-control-btn {
+                    width: 34px;
+                    aspect-ratio: 1/1;
+                    border-radius: 100%;
+                    display: grid;
+                    place-items: center;
+                    box-shadow: 0px 4px 9px 0px #0000000F;
+                    background: #000000;
+                    cursor: pointer;
+                    transition: var(--transition-fast);
+
+                    svg {
+                        width: 22px;
+                        height: 22px;
+                        transition: var(--transition-fast);
+
+                        path {
+                            transition: var(--transition-fast);
+                        }
+                    }
+
+                    &:hover:not(.swiper-button-disabled) {
+                        background: linear-gradient(103.7deg, #FECE26 4.76%, #E5741F 118.16%);
+
+                        svg {
+                            path {
+                                fill: white;
+                            }
+                        }
+                    }
+
+                    &.swiper-button-disabled {
+                        opacity: .75;
+                    }
+                }
+            }
+        }
+
+        .moneyboy-swiper-cards-wrapper {
+            display: grid;
             width: 100%;
-            width: 100%;
-            height: 100%;
-            min-width: 0;
             max-width: 100%;
-            background-color: red;
 
-            h1 {
-                height: 100px;
+            .swiper {
+                width: 100%;
+                overflow: hidden;
+                border-radius: 32px;
+                width: 100%;
+                height: 100%;
+                min-width: 0;
+                max-width: 100%;
+
+                h1 {
+                    height: 100px;
+                }
             }
         }
     }
@@ -1597,7 +1671,7 @@
                 width: 100%;
                 justify-content: space-between;
 
-                /* salman */
+                  
                 .store-page-header--profile {
                     .profile-card {
                         padding: 0;
@@ -1650,7 +1724,7 @@
                         }
                     }
 
-                    /* Salman */
+                      
                 }
 
                 .store-page-header-tag {
@@ -1678,35 +1752,213 @@
     }
 }
 
-/* Danish */
 .featured-content-premium-card {
-    min-height: 323px;
+    min-height: 325px;
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
 
     .featured-content-premium-card-container {
         position: relative;
+        display: flex;
+        width: 100%;
+        align-items: end;
+        padding: 12px;
+        justify-content: end;
 
         .featured-content-bg-img {
             position: absolute;
             width: 100%;
+            inset: 0;
+            display: flex;
 
             img {
                 width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* object-position: 0px 15%; */
+                /* transform: scale(1.12); */
             }
         }
 
         .featured-premium-card-content-container {
             .featured-premium-card-content {
+                position: relative;
+                color: white;
+                max-width: 225px;
+                padding: 12px;
+                width: 100%;
+                backdrop-filter: blur(25px);
+                border-radius: 25px;
+                border: 1px solid #ffffff36;
+
                 .featured-premium-card-icons {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
                     .featured-premium-card-icon {
-                        svg {}
+                        border: 1px solid #ffffff4b;
+                        backdrop-filter: blur(25px);
+                        width: 32px;
+                        display: flex;
+                        aspect-ratio: 1;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+
+                        svg {
+                            width: 18px;
+                            height: 18px;
+
+                            path {
+                                stroke: white;
+                            }
+                        }
+
+                        span {
+                            line-height: 0;
+                            font-size: 14px;
+                        }
+
+                        &:nth-child(2) {
+                            width: unset;
+                            aspect-ratio: unset;
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                            border-radius: 10px;
+                            padding: 5px 8px;
+                        }
                     }
                 }
 
-                h5 {}
+                h5 {
+                    font-family: var(--font-family-heading);
+                    font-weight: 500;
+                    font-size: 18px;
+                    color: white;
+                    margin-top: 10px;
+                    letter-spacing: .5px;
+                }
 
-                p {}
+                p {
+                    font-family: var(--font-family-base);
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 22px;
+                    letter-spacing: .75px;
+                    color: #FFFFFF99;
+                    margin: 8px 0 10px;
+                }
 
-                .btn-txt-gradient {}
+                .btn-txt-gradient {
+                    width: 100%;
+                    display: flex;
+                    gap: 8px;
+                    border-radius: 14px;
+                    padding: 14px 0;
+                    align-items: center;
+
+                    svg {
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                        aspect-ratio: 1;
+                        position: relative;
+                        top: -0.5px;
+                    }
+
+                    span {
+                        display: block;
+                        font-weight: 600;
+                        letter-spacing: .5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.moneyboy-special-content-banner-wrapper {
+    display: flex;
+
+    .moneyboy-special-content-banner-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        padding: 20px;
+        border-radius: 27px;
+        background: #FFFFFF;
+
+        .moneyboy-special-content-banner--content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+
+            h2 {
+                font-weight: 500;
+                font-size: 40px;
+                text-transform: capitalize;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                color: #505050;
+            }
+
+            a {
+                max-width: 250px;
+                display: flex;
+                gap: 6px;
+                padding: 16px 0;
+                border-radius: 16px;
+                margin-top: 10px;
+
+                svg {
+                    position: relative;
+                    top: -1px;
+                }
+
+                span {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .moneyboy-special-content-banner--img-wrapper {
+            max-height: 260px;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            border-radius: 28px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                inset: 0;
+                object-fit: cover;
+            }
+
+            .text-overlay {
+                position: absolute;
+                background: #00000029;
+                backdrop-filter: blur(25px);
+                border: 1px solid #ffffff3f;
+                padding: 10px 15px;
+                border-radius: 24px;
+                overflow: hidden;
+                bottom: 20px;
+
+                p {
+                    color: white;
+                }
             }
         }
     }

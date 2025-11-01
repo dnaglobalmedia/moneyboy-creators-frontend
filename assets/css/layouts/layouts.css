@@ -13,7 +13,9 @@
    min-height: 100dvh;
    max-height: 100dvh;
    overflow: auto;
+   /* overflow-y: scroll; */
    background: #F4F4F4;
+   scrollbar-gutter: stable both-edges;
 
    /* Enables scrolling for the primary page content area */
    .header-main {
@@ -48,7 +50,7 @@
          overflow: auto;
          position: sticky;
          /* Sticky position relative to the main layout container */
-         top: calc(calc(var(--header-height) + var(--spacing-md)) - var(--spacing-sm));
+         top: calc(calc(var(--header-height) + var(--spacing-md)) - var(--spacing-sm) - 4px);
          /* Calculated sticky offset */
          max-height: calc(100dvh - calc(calc(var(--header-height) + calc(2 * var(--spacing-md))) - calc(2 * var(--spacing-sm))));
          /* Full height minus header/padding */
@@ -95,6 +97,7 @@
       /* Main Page Content Area: Primary flexible container */
       .moneyboy-page-content-container {
          padding-block: var(--spacing-md);
+         padding-top: 13px;
          width: 100%;
          min-width: 0px;
          display: flex;

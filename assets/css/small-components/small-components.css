@@ -886,15 +886,36 @@
     width: 100%;
     gap: 10px;
 
+    &:hover {
+        .creator-media-card__media-wrapper {
+            .creator-media-card__stats-overlay {
+                background-color: #0000004b;
+                backdrop-filter: blur(2px);
+
+                .creator-media-card__post-stats {
+                    top: 0px;
+                    opacity: 1;
+                }
+
+                .creator-media-card__overlay-profile-wrapper {
+                    bottom: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     .creator-media-card__media-wrapper {
         width: 100%;
         position: relative;
+        overflow: hidden;
+        border-radius: 26px;
 
         .creator-media-card__media {
             width: 100%;
             aspect-ratio: 4/3;
             overflow: hidden;
-            border-radius: 26px;
+            border-radius: inherit;
 
             img {
                 width: 100%;
@@ -906,7 +927,10 @@
 
         .creator-media-card__overlay {
             position: absolute;
-            inset: 12px;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            z-index: 2;
 
             .creator-media-card__stats {
                 display: flex;
@@ -1003,6 +1027,139 @@
                         line-height: 14px;
                     }
                 }
+            }
+        }
+
+        .creator-media-card__stats-overlay {
+            position: absolute;
+            inset: 0px;
+            padding: 12px;
+            background-color: #0000004b;
+            background-color: #00000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(2px);
+            backdrop-filter: blur(0px);
+
+            .creator-media-card__post-stats {
+                position: relative;
+                top: -20px;
+                opacity: 0;
+                transition: all .35s ease;
+
+                ul {
+                    display: flex;
+                    gap: 16px;
+                    align-items: center;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+                            transition: var(--transition-fast);
+                            cursor: pointer;
+
+                            svg {
+                                width: 26px;
+                                transition: var(--transition-fast);
+                            }
+
+                            span {
+                                color: #fff;
+                                font-size: 14px;
+                            }
+
+                            &.post-like-btn {
+                                &:hover {
+                                    svg {
+                                        transform: scale(1.15);
+
+                                        path {
+                                            stroke: var(--like-color);
+                                            fill: var(--like-color);
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.post-comment-btn {
+                                &:hover {
+                                    svg {
+                                        transform: scale(1.15);
+
+                                        path {
+                                            &:nth-child(1) {
+                                                fill: #46a0e3;
+                                                stroke: #46a0e3;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .creator-media-card__overlay-profile-wrapper {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transition: all .35s ease;
+                bottom: -72px;
+                opacity: 0;
+
+                /*  */
+                .profile-card {
+                    padding: 12px;
+
+                    .profile-card__main {
+                        .profile-card__avatar-settings {
+                            .profile-card__avatar {
+                                border-radius: 16px;
+                                width: 52px;
+
+                                &::before {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    inset: 0;
+                                    border-radius: inherit;
+                                    border: 2px solid #FFFFFF7A;
+                                }
+
+                                img {}
+                            }
+                        }
+
+                        .profile-card__info {
+                            .profile-card__name-badge {
+                                .profile-card__name {
+                                    color: #fff;
+                                    font-size: 18px;
+                                }
+
+                                .profile-card__badge {
+                                    img {}
+                                }
+                            }
+
+                            .profile-card__username {
+                                color: #fff;
+                                font-size: 13px;
+
+                                &:hover {}
+                            }
+                        }
+                    }
+                }
+
+                /*  */
             }
         }
     }

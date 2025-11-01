@@ -1,5 +1,3 @@
-// popup-toggle.js
-
 // -------------------------------------------------------------------
 // 1. CONFIGURATION & CONSTANTS
 // -------------------------------------------------------------------
@@ -9,6 +7,7 @@ const POPUP_WRAPPER_ATTR = "[data-more-actions-toggle-element]";
 const POPUP_TRIGGER_CLASS = ".rel-user-more-opts-trigger-icon";
 const POPUP_ELEMENT_CLASS = ".rel-users-more-opts-popup-wrapper";
 const CLOSING_ACTION_TAG = "LI";
+const COPY_LINK_ATTR = "data-copy-post-link"; // NEW CONSTANT
 const OVERLAY_CLASS_NAME = "mobile-popup-overlay";
 
 const popupTimelines = new Map(); // Key: wrapper element, Value: { tl: gsap.Timeline, isMobileState: boolean }
@@ -19,14 +18,31 @@ const popupTimelines = new Map(); // Key: wrapper element, Value: { tl: gsap.Tim
 
 const isMobile = () => window.innerWidth <= MOBILE_BREAKPOINT;
 
+// Helper function to copy text to clipboard
+function copyToClipboard(text) {
+  if (!navigator.clipboard) {
+    // Fallback for older browsers (can be more robust if needed)
+    console.warn("Clipboard API not available. Link not copied.");
+    return;
+  }
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      console.log("Post link copied to clipboard:", text);
+      // You can add a transient UI notification here (e.g., "Copied!")
+    })
+    .catch((err) => {
+      console.error("Could not copy text: ", err);
+    });
+}
+
 function createOverlay() {
   const existingOverlay = document.querySelector(`.${OVERLAY_CLASS_NAME}`);
   if (existingOverlay) return;
 
   const overlay = document.createElement("div");
-  overlay.className = OVERLAY_CLASS_NAME;
+  overlay.className = OVERLAY_CLASS_NAME; // INLINE CSS STYLES FOR OVERLAY
 
-  // INLINE CSS STYLES FOR OVERLAY
   gsap.set(overlay, {
     position: "fixed",
     top: 0,
@@ -61,7 +77,7 @@ function destroyOverlay() {
 }
 
 // -------------------------------------------------------------------
-// 3. ANIMATION DEFINITION
+// 3. ANIMATION DEFINITION (No changes here)
 // -------------------------------------------------------------------
 
 const createTimeline = (popupEl) => {
@@ -93,8 +109,7 @@ const createTimeline = (popupEl) => {
       onReverseComplete: () => {
         // Cleanup: Clear all relevant inline styles to prevent state bleed
         gsap.set(popupEl, {
-          display: "none",
-          // Use clearProps to wipe all GSAP-applied inline styles when closed
+          display: "none", // Use clearProps to wipe all GSAP-applied inline styles when closed
           clearProps:
             "position, left, bottom, width, transform, zIndex, opacity, y, display, height, overflow",
         });
@@ -115,16 +130,13 @@ const createTimeline = (popupEl) => {
       y: -10,
       opacity: 0,
       display: "none",
-      overflow: "hidden",
+      overflow: "hidden", // Restore default desktop/dropdown styles
 
-      // Restore default desktop/dropdown styles
       position: "absolute", // CRITICAL: Absolute for desktop
       left: "auto",
       bottom: "auto",
       width: "auto",
-      transform: "none",
-      // zIndex: 'auto',
-      // Ensure no mobile styles linger before running desktop setup
+      transform: "none", // zIndex: 'auto', // Ensure no mobile styles linger before running desktop setup
       clearProps:
         "position, left, bottom, width, transform, zIndex, opacity, y, display, height, overflow",
     });
@@ -151,7 +163,7 @@ const createTimeline = (popupEl) => {
 };
 
 // -------------------------------------------------------------------
-// 4. CORE LOGIC FUNCTIONS
+// 4. CORE LOGIC FUNCTIONS (No changes here)
 // -------------------------------------------------------------------
 
 const closePopup = (wrapper) => {
@@ -159,9 +171,8 @@ const closePopup = (wrapper) => {
   if (!item || !item.tl) return;
 
   if (item.tl.progress() > 0) {
-    item.tl.reverse();
+    item.tl.reverse(); // FIX: Destroy the overlay when a single popup is closed (e.g., via option click)
 
-    // FIX: Destroy the overlay when a single popup is closed (e.g., via option click)
     if (isMobile()) {
       destroyOverlay();
     }
@@ -179,14 +190,12 @@ const closeAllPopups = (exceptWrapper = null) => {
     } else if (item.tl.progress() > 0) {
       shouldDestroyOverlay = false;
     }
-  });
+  }); // This handles the 'click outside' scenario
 
-  // This handles the 'click outside' scenario
   if (isMobile() && shouldDestroyOverlay) {
     destroyOverlay();
-  }
+  } // Ensure data-active is removed from *all* if we close globally (e.g., via resize)
 
-  // Ensure data-active is removed from *all* if we close globally (e.g., via resize)
   if (exceptWrapper === null) {
     document
       .querySelectorAll(`${POPUP_WRAPPER_ATTR}[data-active]`)
@@ -206,9 +215,8 @@ const handleToggle = (e) => {
 
   const currentMobileState = isMobile();
   let item = popupTimelines.get(wrapper);
-  let tl;
+  let tl; // Check if the timeline is missing or the screen state has changed
 
-  // Check if the timeline is missing or the screen state has changed
   if (!item || item.isMobileState !== currentMobileState) {
     // Re-create the timeline with correct state
     tl = createTimeline(popupEl);
@@ -237,21 +245,30 @@ const handleToggle = (e) => {
 function setupListeners(wrapper) {
   const triggerBtn = wrapper.querySelector(POPUP_TRIGGER_CLASS);
   const popupEl = wrapper.querySelector(POPUP_ELEMENT_CLASS);
-  if (!triggerBtn || !popupEl) return;
+  if (!triggerBtn || !popupEl) return; // 1. Create the initial timeline
 
-  // 1. Create the initial timeline
   const tl = createTimeline(popupEl);
-  popupTimelines.set(wrapper, { tl: tl, isMobileState: isMobile() });
+  popupTimelines.set(wrapper, { tl: tl, isMobileState: isMobile() }); // 2. Add the main toggle listener
 
-  // 2. Add the main toggle listener
   triggerBtn.removeEventListener("click", handleToggle);
   triggerBtn.addEventListener("click", handleToggle);
 
-  // 3. Add listener to close when an action (LI) inside is clicked
+  // 3. Add listener to handle option clicks (including the new copy feature)
   popupEl.addEventListener("click", (e) => {
-    if (e.target.closest(CLOSING_ACTION_TAG)) {
+    const clickedOption = e.target.closest(CLOSING_ACTION_TAG);
+
+    if (clickedOption) {
       e.stopPropagation();
-      // This calls closePopup, which now correctly destroys the overlay
+
+      // Check if this specific option has the copy attribute
+      const linkToCopy = clickedOption.getAttribute(COPY_LINK_ATTR);
+
+      if (linkToCopy) {
+        // Copy the link to clipboard
+        copyToClipboard(linkToCopy);
+      }
+
+      // Crucially, close the popup regardless of whether a link was copied
       closePopup(wrapper);
     }
   });
@@ -261,29 +278,24 @@ function initializePopups() {
   const popupWrappers = document.querySelectorAll(POPUP_WRAPPER_ATTR);
 
   popupTimelines.clear();
-  destroyOverlay();
+  destroyOverlay(); // CRITICAL FIX: Manually clear the position property on all popups // before re-initialization to prevent state bleed from the previous view.
 
-  // CRITICAL FIX: Manually clear the position property on all popups
-  // before re-initialization to prevent state bleed from the previous view.
   popupWrappers.forEach((wrapper) => {
     const popupEl = wrapper.querySelector(POPUP_ELEMENT_CLASS);
     if (popupEl) {
       popupEl.style.position = ""; // Remove inline position style
     }
-  });
+  }); // Ensure all data-active attributes are cleared on initialization
 
-  // Ensure all data-active attributes are cleared on initialization
   document
     .querySelectorAll(`${POPUP_WRAPPER_ATTR}[data-active]`)
     .forEach((el) => el.removeAttribute("data-active"));
 
-  popupWrappers.forEach(setupListeners);
+  popupWrappers.forEach(setupListeners); // Add the global click-outside-to-close listener
 
-  // Add the global click-outside-to-close listener
   document.removeEventListener("click", closeAllPopupsListener);
-  document.addEventListener("click", closeAllPopupsListener);
+  document.addEventListener("click", closeAllPopupsListener); // Handle window resize
 
-  // Handle window resize
   window.removeEventListener("resize", resizeHandler);
   window.addEventListener("resize", resizeHandler);
 
@@ -306,8 +318,7 @@ const resizeHandler = () => {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
     // CRITICAL FIX: Close all popups immediately when resizing starts
-    closeAllPopups(null);
-    // Then re-run initialization to swap animation types/styles
+    closeAllPopups(null); // Then re-run initialization to swap animation types/styles
     initializePopups();
   }, 150);
 };

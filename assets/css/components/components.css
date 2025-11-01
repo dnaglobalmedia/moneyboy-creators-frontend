@@ -1137,7 +1137,7 @@
                color: #505050;
             }
 
-            .moenyboy-post__more-opt-btn {
+            /* .moenyboy-post__more-opt-btn {
                display: flex;
                width: 24px;
                aspect-ratio: 1/1;
@@ -1151,7 +1151,7 @@
                      stroke: #292D32;
                   }
                }
-            }
+            } */
          }
       }
 

@@ -350,18 +350,10 @@
         }
     }
 
-    .rel-users-wrapper {
-        .rel-user-box {
-            .rel-user-profile-action {
-                .rel-user-actions {
-                    .rel-user-more-opts-wrapper {
-                        .rel-users-more-opts-popup-wrapper {
-                            position: fixed !important;
-                            padding-inline: 12.5px;
-                        }
-                    }
-                }
-            }
+    .rel-user-more-opts-wrapper {
+        .rel-users-more-opts-popup-wrapper {
+            position: fixed !important;
+            padding-inline: 12.5px;
         }
     }
 

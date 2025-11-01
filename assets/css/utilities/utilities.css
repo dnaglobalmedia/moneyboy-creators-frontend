@@ -208,11 +208,12 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 14px;
 }
+
 .section-heading-label {
-     font-family: var(--font-family-heading);
-                font-weight: 500;
-                font-size: 24px;
-                color: #020202;
-                letter-spacing: -0.5px;
-                text-transform: capitalize;
+    font-family: var(--font-family-heading);
+    font-weight: 500;
+    font-size: 24px;
+    color: #020202;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
 }

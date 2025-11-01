@@ -2,7 +2,7 @@
 
 /**
  * Sets up the grid layout toggle functionality for a single container.
- * @param {HTMLElement} mainContainer - The root element with data-multi-dem-cards-layout.
+ * @param { HTMLElement} mainContainer - The root element with data-multi-dem-cards-layout.
  */
 function setupGridLayoutToggle(mainContainer) {
   const buttonWrapper = mainContainer.querySelector(
@@ -42,7 +42,7 @@ function setupGridLayoutToggle(mainContainer) {
 
   /**
    * Handles the click event on a layout button to toggle the grid columns.
-   * @param {HTMLElement} clickedButton - The button element that was clicked.
+   * @param { HTMLElement} clickedButton - The button element that was clicked.
    */
   function handleLayoutToggle(clickedButton) {
     const layoutAttribute = "data-layout-toggle-rows";

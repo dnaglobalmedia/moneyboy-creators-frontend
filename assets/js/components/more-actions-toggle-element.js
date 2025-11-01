@@ -10,7 +10,7 @@ const CLOSING_ACTION_TAG = "LI";
 const COPY_LINK_ATTR = "data-copy-post-link"; // NEW CONSTANT
 const OVERLAY_CLASS_NAME = "mobile-popup-overlay";
 
-const popupTimelines = new Map(); // Key: wrapper element, Value: { tl: gsap.Timeline, isMobileState: boolean }
+const popupTimelines = new Map(); // Key: wrapper element, Value: {  tl: gsap.Timeline, isMobileState: boolean }
 
 // -------------------------------------------------------------------
 // 2. UTILITY FUNCTIONS

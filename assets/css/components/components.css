@@ -1137,7 +1137,7 @@
                color: #505050;
             }
 
-            /* .moenyboy-post__more-opt-btn {
+            /* .moenyboy-post__more-opt-btn { 
                display: flex;
                width: 24px;
                aspect-ratio: 1/1;
@@ -1146,8 +1146,8 @@
                cursor: pointer;
                user-select: none;
 
-               svg {
-                  path {
+               svg { 
+                  path { 
                      stroke: #292D32;
                   }
                }
@@ -1727,10 +1727,10 @@
                            }
                         }
 
-                        /* &:not(.no-hover) {
+                        /* &:not(.no-hover) { 
 
                            &:hover,
-                           &.active {
+                           &.active { 
                               background: var(--color-text-active);
                               background: #ecececb7;
                            }

@@ -1329,6 +1329,31 @@
         min-height: max-content;
         display: none;
 
+        &:has([data-copy-post-link]) {
+            min-width: max-content;
+            max-width: max-content;
+            right: unset;
+            left: 100%;
+            margin-left: 20px;
+
+            .rel-users-more-opts-popup-container {
+                padding: 10px 14px 10px 10px;
+                border-radius: 12px;
+
+                ul {
+                    li {
+                        gap: 4px;
+
+                        .icon {
+                            svg {
+                                width: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .rel-users-more-opts-popup-container {
             width: 100%;
             padding: 20px;
@@ -1370,6 +1395,7 @@
                             path {
                                 transition: var(--transition-fast);
                                 stroke: #000;
+                                stroke: #444444;
                             }
                         }
                     }
@@ -1385,7 +1411,9 @@
                     &:hover {
                         .icon {
                             svg {
-                                path {}
+                                path {
+                                    stroke: #000;
+                                }
                             }
 
                             &.share-icon {
@@ -1435,14 +1463,15 @@
                             &.copy-link-icon {
                                 svg {
                                     path {
-                                        &:nth-child(1) {
+                                        stroke: #000;
+                                        /* &:nth-child(1) { 
                                             fill: black;
                                         }
 
                                         &:nth-child(3),
-                                        &:nth-child(2) {
+                                        &:nth-child(2) { 
                                             stroke: #fff;
-                                        }
+                                        } */
                                     }
                                 }
                             }

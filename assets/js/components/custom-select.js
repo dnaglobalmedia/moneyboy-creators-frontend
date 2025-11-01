@@ -2,7 +2,7 @@
 
 // /**
 //  * Global array to store references to all active custom select elements for management.
-//  * @type {Array<Object>}
+//  * @type { Array<Object>}
 //  */
 // const activeSelects = [];
 
@@ -12,9 +12,9 @@
 
 // /**
 //  * Sets up the GSAP animation timeline for a single custom select dropdown.
-//  * @param {HTMLElement} dropdown - The dropdown element ([data-custom-select-dropdown]).
-//  * @param {HTMLElement} chevron - The SVG element for the chevron icon.
-//  * @returns {object} The configured GSAP Timeline object.
+//  * @param { HTMLElement} dropdown - The dropdown element ([data-custom-select-dropdown]).
+//  * @param { HTMLElement} chevron - The SVG element for the chevron icon.
+//  * @returns { object} The configured GSAP Timeline object.
 //  */
 // function createDropdownTimeline(dropdown, chevron) {
 //   // 1. Set initial state (This mimics the "display: none" from CSS)
@@ -35,10 +35,10 @@
 //       ease: "power2.out",
 //     },
 //     onStart: () => {
-//       gsap.set(dropdown, { display: "block" });
+//       gsap.set(dropdown, {  display: "block" });
 //     },
 //     onReverseComplete: () => {
-//       gsap.set(dropdown, { display: "none" });
+//       gsap.set(dropdown, {  display: "none" });
 //     },
 //   });
 
@@ -63,17 +63,17 @@
 //     0
 //   );
 
-//   tl.set(dropdown, { overflow: "visible" });
+//   tl.set(dropdown, {  overflow: "visible" });
 
 //   return tl;
 // }
 
 // /**
 //  * Closes a specific select element and updates its state.
-//  * @param {HTMLElement} selectElement - The root element to close.
-//  * @param {object} timeline - The GSAP timeline associated with the element.
-//  * @param {HTMLElement|null} searchInput - The search input element, or null if not present.
-//  * @param {function|null} filterOptions - The function to reset filters, or null if not present.
+//  * @param { HTMLElement} selectElement - The root element to close.
+//  * @param { object} timeline - The GSAP timeline associated with the element.
+//  * @param { HTMLElement|null} searchInput - The search input element, or null if not present.
+//  * @param { function|null} filterOptions - The function to reset filters, or null if not present.
 //  */
 // function closeSelectElement(
 //   selectElement,
@@ -98,7 +98,7 @@
 
 // /**
 //  * Handles the logic to close all other open custom selects.
-//  * @param {HTMLElement} currentElement - The select element that is currently being toggled/opened.
+//  * @param { HTMLElement} currentElement - The select element that is currently being toggled/opened.
 //  */
 // function closeOtherOpenSelects(currentElement) {
 //   activeSelects.forEach((item) => {
@@ -119,7 +119,7 @@
 
 // /**
 //  * Sets up event listeners and logic for a single custom select element.
-//  * @param {HTMLElement} selectElement - The root element with data-custom-select-element.
+//  * @param { HTMLElement} selectElement - The root element with data-custom-select-element.
 //  */
 // function setupCustomSelect(selectElement) {
 //   const trigger = selectElement.querySelector("[data-custom-select-triger]");
@@ -257,7 +257,7 @@
 //   }
 
 //   console.log(
-//     `Found ${customSelects.length} custom select element(s). Initializing...`
+//     `Found ${ customSelects.length} custom select element(s). Initializing...`
 //   );
 
 //   customSelects.forEach((selectElement) => {
@@ -280,7 +280,7 @@
 
 /**
  * Global array to store references to all active custom select elements for management.
- * @type {Array<Object>}
+ * @type { Array<Object>}
  */
 const activeSelects = [];
 
@@ -290,9 +290,9 @@ const activeSelects = [];
 
 /**
  * Sets up the GSAP animation timeline for a single custom select dropdown.
- * @param {HTMLElement} dropdown - The dropdown element ([data-custom-select-dropdown]).
- * @param {HTMLElement} chevron - The SVG element for the chevron icon.
- * @returns {object} The configured GSAP Timeline object.
+ * @param { HTMLElement} dropdown - The dropdown element ([data-custom-select-dropdown]).
+ * @param { HTMLElement} chevron - The SVG element for the chevron icon.
+ * @returns { object} The configured GSAP Timeline object.
  */
 function createDropdownTimeline(dropdown, chevron) {
   // Check for GSAP availability *before* using it in case of a direct call
@@ -403,7 +403,7 @@ function closeOtherOpenSelects(currentElement) {
 
 /**
  * Sets up event listeners and logic for a single custom select element.
- * @param {HTMLElement} selectElement - The root element with data-custom-select-element.
+ * @param { HTMLElement} selectElement - The root element with data-custom-select-element.
  */
 function setupCustomSelect(selectElement) {
   const trigger = selectElement.querySelector("[data-custom-select-triger]");

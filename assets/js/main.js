@@ -33,3 +33,6 @@ import "./components/grid-cols-layout-toggle.js";
 
 // Swiper Functionality
 import "./components/swipers.js";
+
+// Follow/Unfollow Button Toggle Functionality
+import "./components/follow-unfollow-btn-toggle.js";
